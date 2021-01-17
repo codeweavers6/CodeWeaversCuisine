@@ -36,10 +36,14 @@ Make your own food cousin, a website where you can add your favorite ingredients
 ### Prepared meals page
 
 ![prepared meals](img/wire-frame/prepared-meals.PNG)
-
-# Version 1.0.0 
-
-# A list of any libraries, frameworks, or packages that your application requires in order to properly function. 
+ 
 
 # Domain Modeling
 ![domainModeling](img/domainModeling.jpg)
+
+
+# Entity Relationship Diagram for our database:
+* Food menu table:
+ * 1-to-many relationships
+ * First Column: Meal`s name, text.
+ * Second Column: Ingredients, text.
