@@ -1,0 +1,102 @@
+body {
+    background-color: #dddddd;
+}
+
+header {
+    background-color: #f05454;
+    color: #222831;
+}
+
+header h2 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+header nav ul{
+    width: 70%;
+    margin: auto;
+    display: inline-block;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+
+}
+
+header nav ul li a:link {
+    text-decoration: none;
+}
+
+header nav ul li a{
+    color: #222831;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+main div {
+    width: 25%;
+    display: inline;
+    
+}
+
+main div a img {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: black 1px solid;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.first-image-text {
+    display: inline;
+    position: absolute;
+    top: 263px;
+    left: 379px;
+    padding: 22px 66px 10px 65px;
+    background-color: rgba(178, 178, 178,0.8);
+    border-radius: 10px;
+}
+
+.second-image-text {
+    display: inline;
+    position: absolute;
+    top: 263px;
+    left: 715px;
+    padding: 22px 79px 10px 96px;
+    background-color: rgba(178, 178, 178,0.8);
+    border-radius: 10px;
+}
+
+main div a:link {
+    text-decoration: none ;
+}
+
+main div a {
+    color: #222831;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+section {
+    width: 100%;
+}
+
+section table {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    color: #222831;
+}
+
+section table th {
+    text-align: left;
+}
