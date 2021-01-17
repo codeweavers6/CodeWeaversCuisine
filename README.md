@@ -40,3 +40,6 @@ Make your own food cousin, a website where you can add your favorite ingredients
 # Version 1.0.0 
 
 # A list of any libraries, frameworks, or packages that your application requires in order to properly function. 
+
+# Domain Modeling
+![domainModeling](img/domainModeling.jpg)
