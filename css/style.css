@@ -14,7 +14,6 @@ header h2 {
 
 header nav ul{
     width: 70%;
-    margin: auto;
     display: inline-block;
     text-align: right;
 }
@@ -23,7 +22,7 @@ header nav ul li {
     display: inline-block;
     list-style-type: none;
     margin-left: 20px;
-
+    font-size: larger;
 }
 
 header nav ul li a:link {
@@ -50,17 +49,22 @@ main div a img {
     position: relative;
     width: 300px;
     height: 200px;
-    border: black 1px solid;
+    border: #30475e 2px solid;
     border-radius: 10px;
     margin-top: 40px;
-    margin-left: 30px;
+    margin-left: 57px;
+    margin-right: 60px;
+}
+
+main div a img:active {
+    box-shadow: 0 0 1px 2px #5d6e88;
 }
 
 .first-image-text {
     display: inline;
     position: absolute;
     top: 263px;
-    left: 379px;
+    left: 310px;
     padding: 22px 66px 10px 65px;
     background-color: rgba(178, 178, 178,0.8);
     border-radius: 10px;
@@ -70,7 +74,7 @@ main div a img {
     display: inline;
     position: absolute;
     top: 263px;
-    left: 715px;
+    left: 735px;
     padding: 22px 79px 10px 96px;
     background-color: rgba(178, 178, 178,0.8);
     border-radius: 10px;
@@ -91,13 +95,103 @@ section {
 }
 
 section table {
-    width: 65%;
+    width: 55%;
     margin: auto;
     margin-top: 50px;
     color: #222831;
+    empty-cells: hide;
 }
 
 section table th {
     text-align: left;
+    font-size: larger;
 }
+
+section table td {
+    background-color: #30475e;
+    color: #dddddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.active-cell:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+section table td:active {
+    box-shadow: 0 0 1px 2px #5d6e88  ;
+} 
+
+section h3 , section p {
+    color: #222831;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+section h3 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+section p {
+    overflow-y: scroll;
+    height: 40px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #f05454;
+    color: #222831;
+}
+
+.first-div {
+    display: inline-block ;
+    width: 33%;
+}
+
+footer div h4 {
+    margin-left:10px ;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+.second-div :link {
+    text-decoration: none;
+}
+
+.second-div ul li a {
+    color: #222831;
+}
+
+.second-div {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+
+.third-div {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.third-div a:link {
+    text-decoration: none ;
+}
+
+.third-div h4, .third-div a {
+    color: #222831;
+}
+
+.third-div a {
+    font-size: larger;
+}
+
 
