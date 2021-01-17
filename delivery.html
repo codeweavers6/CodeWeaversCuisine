@@ -5,6 +5,22 @@
     <title>Delivery Page</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<style>
+    .input-field {
+        width: 50%;
+        margin: 7px auto;
+    }
+
+    .input-field input {
+        display: block;
+        width: 100%;
+        padding: 7px;
+    }
+
+    .input-radio {
+        margin-top: 50px;
+    }
+</style>
 
 <body>
     <header>
@@ -22,41 +38,48 @@
     <main>
         <form action="/delieveryInfo.html">
             <fieldset>
-                <label for="fname">Your Name:</label>
-                <input type="text" id="fname" name="fname" required>
-
-                <label for="city">City Name:</label>
-                <input type="text" id="cityId" name="city" required>
-
-                <label for="street">Street Name:</label>
-                <input type="text" id="streetId" name="street" required>
-
-                <label for="building">Building Number:</label>
-                <input type="text" id="buildingId" name="building" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phoneId" name="phone" pattern="[0-7]{2}-[0-9]{3}-[0-9]{4}" required>
-                <small>Format: 07-456-7890</small>
-
-                <!-- from the JS we add a listener in case the user choose Paypal or visa, a new field will show for further info -->
-                <div>
-                    <p>Payment Method: </p>
-                    <input type="radio" id="visaCardId" name="payment" value="VisaCard">
-                    <label for="VisaCard">Visa Card</label>
-                    <input type="radio" id="payPalId" name="payment" value="payPal">
-                    <label for="payPal">Paypal</label>
-                    <input type="radio" id="CashId" name="payment" value="cash">
-                    <label for="cash">Cash upon dilevery</label>
+                <div class="input-field">
+                    <label for="fname">Your Name:</label>
+                    <input type="text" id="fname" name="fname" required>
                 </div>
 
-                <label for="confirm">Confirm Delivery</label>
-                <input type="submit" id="confirmButtonIdId" name="confirm" required>
-
-
+                <div class="input-field">
+                    <label for="city">City Name:</label>
+                    <input type="text" id="cityId" name="city" required>
+                </div>
+                <div class="input-field">
+                    <label for="street">Street Name:</label>
+                    <input type="text" id="streetId" name="street" required>
+                </div>
+                <div class="input-field">
+                    <label for="building">Building Number:</label>
+                    <input type="text" id="buildingId" name="building" required>
+                </div>
+                <div class="input-field">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phoneId" name="phone" pattern="[0-7]{2}-[0-9]{3}-[0-9]{4}" required>
+                    <small>Format: 07-456-7890</small>
+                </div>
+                <div class="input-field">
+                    <!-- from the JS we add a listener in case the user choose Paypal or visa, a new field will show for further info -->
+                    <div class="input-field input-radio">
+                        <p>Payment Method: </p>
+                        <input type="radio" id="visaCardId" name="payment" value="VisaCard">
+                        <label for="VisaCard">Visa Card</label>
+                        <input type="radio" id="payPalId" name="payment" value="payPal">
+                        <label for="payPal">Paypal</label>
+                        <input type="radio" id="CashId" name="payment" value="cash">
+                        <label for="cash">Cash upon dilevery</label>
+                    </div>
+                </div>
+                <div class="input-filed">
+                    <label for="confirm">Confirm Delivery</label>
+                    <input type="submit" id="confirmButtonIdId" name="confirm" required>
+                </div>
             </fieldset>
         </form>
 
-        <img src="https://pomokata.com/wp-content/uploads/2018/11/moto.png" alt="food delivery method"/>
+        <img src="https://pomokata.com/wp-content/uploads/2018/11/moto.png" alt="food delivery method" />
     </main>
 </body>
 

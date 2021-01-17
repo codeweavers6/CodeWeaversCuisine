@@ -87,7 +87,6 @@ as a user, i want to display menu of meals we provide so user can see wha we off
    3. add to local storage.
    4. represent data using chart.js.
 
-  
 #### story 6 :
    as a user, I want customers to feel that they are safe and we are trusted by applying safty and healthy measures by showing our ISO certification.
       1. add ISO certification to home page in footer section.

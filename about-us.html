@@ -6,11 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Weavers Team</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        body {
+            background-color: #dddddd;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        header {
+            background-color: #f05454;
+            color: #222831;
+        }
+
+        header h2 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        header nav ul {
+            width: 70%;
+            display: inline-block;
+            text-align: right;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 20px;
+            font-size: larger;
+        }
+
+        header nav ul li a:link {
+            text-decoration: none;
+        }
+
+        header nav ul li a {
+            color: #222831;
+        }
+
+        main {
+            line-height: 1.5;
+        }
+
+        /* // headings classes  */
+        .heading {
+            font-size: 40px;
+        }
+
+        /* members section */
+        .member-profile-pic {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #f05454;
+            border-radius: 90%;
+        }
+
+        #about-us {
+            margin: 20px 150px;
+            padding: 50px 0;
+        }
+
+        #team-bio {
+            background-color: #f05454;
+            color: #dddddd;
+            padding: 20px 150px;
+        }
+
+
+        .member {
+            display: inline-block;
+            width: 400px;
+            padding: 20px 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <header class="red-background">
         <nav>
             <h2>
                 codeWeaversRestaurant
@@ -23,9 +99,8 @@
 
     </header>
     <main>
-        <section>
-            <h1>Code Weavers Cuisine</h1>
-
+        <section id="about-us">
+            <h1 class="heading">Code Weavers Cuisine</h1>
             <p>
                 Code Weavers started Code Weavers Cuisine because we Believe food taste matter and we found that usually
                 resturants do their food based only on menu and this menu tell us what we should taste, and we don't all
@@ -40,7 +115,7 @@
 
             <p>
                 Along the way, our customers will get the chance make their own gredients list and we will cook it based
-                on customer desire by professional and certified cook.
+                on customer desire by professional and certified chef.
             </p>
 
             <p>
@@ -48,65 +123,65 @@
                 our best so you have best experience.
             </p>
         </section>
-        <section>
-            <h2>Our Team</h2>
-            <article>
-                <img src="img/team/Yazan.png" alt="Yazan Abu Sneneh">
+        <section id="team-bio">
+            <h2 class="heading">Our Team</h2>
+            <article class="member">
+                <img class="member-profile-pic" src="img/team/Yazan.jpg" alt="Yazan Abu Sneneh">
                 <h4>Yazan Abu Sneneh</h4>
-                <p>I am a software developer who is passionate about programming because it's creative and challenging
-                    field. I believe technology is the future and the future is our responsibility.</p>
+                <!-- <p>I am a software developer who is passionate about programming because it's creative and challenging
+                    field. I believe technology is the future and the future is our responsibility.</p> -->
                 <div>
                     <a href="https://www.linkedin.com/in/yazan-a-sneneh/">LinkedIn</a>
                     <a href="https://github.com/YazanSneneh">GitHub</a>
                 </div>
             </article>
 
-            <article>
-                <img src="img/team/boshra.jpg" alt="Boshra Jaber">
+            <article class="member">
+                <img class="member-profile-pic" src="img/team/boshra.jpg" alt="Boshra Jaber">
                 <h4>Boshra Jaber</h4>
-                <p>My name is Boshra Jaber, I am an Automatic Control and Computers engineer/ Software developer
+                <!-- <p>My name is Boshra Jaber, I am an Automatic Control and Computers engineer/ Software developer
                     student. My passion is coding, Codes are the place where I can get creative and learn new things
                     constantly. I am also a Quality management consultant with two years of experience.</p>
-                <div>
-                    <a href="https://www.linkedin.com/in/boshra-jaber/">LinkedIn</a>
-                    <a href="https://github.com/BoshraJaber">GitHub</a>
+                <div> -->
+                <a href="https://www.linkedin.com/in/boshra-jaber/">LinkedIn</a>
+                <a href="https://github.com/BoshraJaber">GitHub</a>
                 </div>
             </article>
-            <article>
-                <img src="img/team/bashar.jpg" alt="Bashar Nofel">
+            <article class="member">
+                <img class="member-profile-pic" src="img/team/bashar.jpg" alt="Bashar Nofel">
                 <h4>Bashar Nofel</h4>
-                <p>I'm Bashar Nofal, I'm an electrical engineer, I graduated from the Hashemite University, since my
+                <!-- <p>I'm Bashar Nofal, I'm an electrical engineer, I graduated from the Hashemite University, since my
                     graduation I've been working on a career-shift, so i got CCNA certificate, and then I took multiple
-                    online courses related to Linux basics and essentials.</p>
+                    online courses related to Linux basics and essentials.</p> -->
                 <div>
                     <a href="https://www.linkedin.com/in/basharnofal97/">LinkedIn</a>
                     <a href="https://github.com/BasharNofal">GitHub</a>
                 </div>
             </article>
-            <article>
-                <img src="img/team/default.jpg" alt="Ibrahim Al-Jaber">
+            <article class="member">
+                <img class="member-profile-pic" src="img/team/default.jpg" alt="Ibrahim Al-Jaber">
                 <h4>Ibrahim Al-Jaber</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, sequi?.</p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, sequi?.</p> -->
                 <div>
                     <a href="">LinkedIn</a>
                     <a href="">GitHub</a>
                 </div>
             </article>
-            <article>
-                <img src="img/team/Salah.jpg" alt="Salah Alawneh">
+            <article class="member">
+                <img class="member-profile-pic" src="img/team/Salah.jpg" alt="Salah Alawneh">
                 <h4>Salah Alawneh</h4>
-                <p>I'm Salah Alawneh, i studied mechanical engineering. I'm really into computer science, and like
-                    working in JavaScript, and i'm looking to learn more everyday.</p>
+                <!-- <p>I'm Salah Alawneh, i studied mechanical engineering. I'm really into computer science, and like
+                    working in JavaScript, and i'm looking to learn more everyday.</p> -->
                 <div>
                     <a href="https://www.linkedin.com/in/salah-alawneh-04b780202/">LinkedIn</a>
                     <a href="https://github.com/SalahAlawneh">GitHub</a>
                 </div>
             </article>
 
-            <article>
-                <img src="whatever" alt="">
+            <article class="member">
+                <img class="member-profile-pic" src="whatever" alt="">
                 <h4>Own</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, soluta?</p>
+                <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, soluta?</p> -->
                 <div>
                     <a href="">LinkedIn</a>
                     <a href="">GitHub</a>
