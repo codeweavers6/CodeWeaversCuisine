@@ -20,7 +20,26 @@ Make your own food cousin, a website where you can add your favorite ingredients
 * with online delivery services.
 * The user can travel the world just by visiting us as we provide a lists of most popular dishes from cuisines in all around the world.
 
+# Wire Frame
+
+
+### Home page
+
+![home page](img/wire-frame/home-page.PNG)
+
+
+### Make your own meal page
+
+![make your own meal](img/wire-frame/make-your-own-meal.PNG)
+
+
+### Prepared meals page
+
+![prepared meals](img/wire-frame/prepared-meals.PNG)
 
 # Version 1.0.0 
 
 # A list of any libraries, frameworks, or packages that your application requires in order to properly function. 
+
+# Domain Modeling
+![domainModeling](img/domainModeling.jpg)
