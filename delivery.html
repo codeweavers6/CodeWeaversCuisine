@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Delivery Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>
+                codeWeavers Cuisine
+            </h2>
+            <ul>
+                <li><a href="">contact us</a></li>
+                <li><a href="about-us.html">about us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <form action="/delieveryInfo.html">
+            <fieldset>
+                <label for="fname">Your Name:</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="city">City Name:</label>
+                <input type="text" id="cityId" name="city" required>
+
+                <label for="street">Street Name:</label>
+                <input type="text" id="streetId" name="street" required>
+
+                <label for="building">Building Number:</label>
+                <input type="text" id="buildingId" name="building" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phoneId" name="phone" pattern="[0-7]{2}-[0-9]{3}-[0-9]{4}" required>
+                <small>Format: 07-456-7890</small>
+
+                <!-- from the JS we add a listener in case the user choose Paypal or visa, a new field will show for further info -->
+                <div>
+                    <p>Payment Method: </p>
+                    <input type="radio" id="visaCardId" name="payment" value="VisaCard">
+                    <label for="VisaCard">Visa Card</label>
+                    <input type="radio" id="payPalId" name="payment" value="payPal">
+                    <label for="payPal">Paypal</label>
+                    <input type="radio" id="CashId" name="payment" value="cash">
+                    <label for="cash">Cash upon dilevery</label>
+                </div>
+
+                <label for="confirm">Confirm Delivery</label>
+                <input type="submit" id="confirmButtonIdId" name="confirm" required>
+
+
+            </fieldset>
+        </form>
+
+        <img src="https://pomokata.com/wp-content/uploads/2018/11/moto.png" alt="food delivery method"/>
+    </main>
+</body>
+
+</html>
