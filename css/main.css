@@ -8,25 +8,28 @@ a{
 }
 header{
     background-color:#a20a0a ;
-    height: 80px;
+    height: 110px;
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
 }
 nav{
-    width: 75%;
+    width: 100%;
     position: fixed;
-    left: 25%;
-    
+    left: 5%;
+    font-family:'Yellowtail', cursive;
+    height: 110px;
+
 }
 .li{
     display: inline;
-    line-height: 80px;
+    line-height: 110px;
     color: #f6eec9;
-    margin-left: 60px;
+    margin-left: 100px;
     float: left;
-    font-size: 21px;
+    font-size: 1.4vw;
+    
 }
 .li:hover{
     color: white;
@@ -39,11 +42,11 @@ nav{
 }
 #logo{
     width: 280px;
-    height: 180px;
+    height: 240px;
     float: left;
     z-index: 2;
     position: relative;
-    top:-53px;
+    top:-70px;
     right:20px;
     
 }
@@ -52,7 +55,7 @@ footer {
     margin-top: 50px;
     color: #f6eec9;
     background-color:#a20a0a ;
-
+    clear: both;
     position: relative;
     bottom: 0;
     width: 100%;
