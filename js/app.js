@@ -1,8 +1,8 @@
 ' use strict ';
 
 var arrayOfFood = [];
-var arrayOfPaths = ['food1.jpg','food2.jpg'];
-var arrayOfIngredients = ['Salt.Peper.Garlic','Onion.Bell peper.Parsley']; 
+var arrayOfPaths = ['food1.jpg', 'food2.jpg'];
+var arrayOfIngredients = ['Salt.Peper.Garlic', 'Onion.Bell peper.Parsley'];
 
 var getFoodId = 0;
 
@@ -32,7 +32,7 @@ var table = document.getElementById('table');
 var cartButton = document.getElementById("cart-button");
 
 
-function Meals (path,ingredients,price) {
+function Meals(name, path, ingredients, price) {
     this.path = 'img/' + path;
     this.name = path.split('.')[0];
     this.ingredients = ingredients;
