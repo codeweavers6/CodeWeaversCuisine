@@ -99,3 +99,19 @@ td:nth-child(3):hover{
     cursor: pointer;
     opacity: 0.7;
 }
+
+#cart-button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.first-div ul li {
+    display: inline;
+}
+
+.first-div img {
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
