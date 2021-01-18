@@ -59,15 +59,17 @@ table{
     font-size: 22px;
     border-width: 1px;
 
-
 }
+
 th,tr,td{
     width: 10px;
     padding: 30px 0px 30px 10px;
+
     font-family: 'Merienda', cursive;
 
 
     
+
 }
 
 h3{
@@ -101,4 +103,30 @@ td:first-child{
 }
 td:nth-child(3){
     background-color:white ;
+}
+
+td:first-child:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+td:nth-child(3):hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#cart-button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.first-div ul li {
+    display: inline;
+}
+ 
+.first-div img {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
