@@ -4,7 +4,7 @@
 
 var arrayOfCustomerMeal = [];
 var addIngredient = document.getElementById("addIngredientId");
-var submitIngredient = document.getElementById("submit-order");
+var submitIngredient = document.getElementById("Main-dish");
 
 var counter = 3;
 
@@ -45,22 +45,24 @@ function addIngredientFunction(event) {
 // Listener function for submiting the form
 function submitIngrenientFunction(event) {
     event.preventDefault();
+    // var Name = event.target.mealNameName.value;
+    // console.log(Name);
+    var arrayofIngredients = [];
+    while (counter > 0) {
+        var mealNew = event.target.mealNameName.value;
+        console.log(mealNew);
+        var firstIngredientNew = event.target.firstIngredientName.value;
+        var secondIngredientNew = event.target.secondIngredientName.value;
+        var newIngredient = event.target.extraIngredient.value;
 
-    // while (counter > 0) {
-    //     var mealNew = event.target.mealNameName.value;
+        arrayofIngredients = [firstIngredientNew, secondIngredientNew];
 
-    //     var firstIngredientNew = event.target.firstIngredientName.value;
-    //     var secondIngredientNew = event.target.secondIngredientName.value;
-    //     var newIngredient = event.target.extraIngredient.value;
-
-    //     var arrayofIngredients = [firstIngredientNew, secondIngredientNew];
-
-    //     arrayofIngredients.push(newIngredient);
-    //     counter--;
-    // }
-    // var addingLocation = new CustomerMeal(mealNew, arrayofIngredients, true, ture, true, true, true);
-    // console.log(addIngredient);
- }
+        arrayofIngredients.push(newIngredient);
+        counter--;
+    }
+    var addingLocation = new CustomerMeal(mealNew, arrayofIngredients, true, true, true, true, true);
+    console.log( addingLocation);
+}
 
 
 
@@ -68,4 +70,5 @@ function submitIngrenientFunction(event) {
 //listner to add more ingredients
 addIngredient.addEventListener('click', addIngredientFunction);
 // listner to submit the form
-submitIngredient.addEventListener('click', submitIngrenientFunction);
+submitIngredient.addEventListener('submit', submitIngrenientFunction);
+console.log(submitIngredient);
