@@ -1,15 +1,15 @@
 ' use strict ';
 
 var arrayOfFood = [];
-var arrayOfPaths = ['food1.jpg', 'food2.jpg'];
-var arrayOfIngredients = ['Salt.Peper.Garlic', 'Onion.Bell peper.Parsley'];
+var arrayOfPaths = ['food1.jpg','food2.jpg'];
+var arrayOfIngredients = ['Salt.Peper.Garlic','Onion.Bell peper.Parsley']; 
+var arrayOfPrices = [];
 
 var getFoodId = 0;
 
 var arrayOfStoredFood = [];
 
 var arrayOfClickedItems = ["one", "two", "three", "four", "five", "six"];
-
 
 var firstItem = document.getElementById("first-item");
 var secondItem = document.getElementById("second-item");
@@ -42,6 +42,10 @@ function Meals(name, path, ingredients, price) {
 
 function genRandomPrice() {
     return Math.round(Math.random()*(5-3)+3); 
+}
+
+function genRandomIndex() {
+    return Math.floor(Math.random()*arrayOfFood.length/2);
 }
 
 for (var index = 0; index < arrayOfPaths.length; index++) {
