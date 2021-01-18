@@ -21,10 +21,12 @@ nav{
     
 }
 .li{
-    display: inline-block;
+    display: inline;
     line-height: 80px;
     color: #f6eec9;
-    margin-left: 80px;
+    margin-left: 60px;
+    float: left;
+    font-size: 21px;
 }
 .li:hover{
     color: white;
@@ -36,9 +38,13 @@ nav{
     margin-top: 100px;
 }
 #logo{
-    width: 200px;
-    height: 80px;
+    width: 280px;
+    height: 180px;
     float: left;
+    z-index: 2;
+    position: relative;
+    top:-53px;
+    right:20px;
     
 }
 
