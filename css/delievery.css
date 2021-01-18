@@ -1,0 +1,80 @@
+/* done by ibrahim */
+fieldset{
+    width: 100%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #a20a0a;
+    padding: 23px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #fff5c0;
+    color: #a20a0a;
+    margin-top: 50px;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: #a20a0a;
+    font-size: 18px;
+
+}
+.textfild{
+    width: 90%;
+}
+label{
+    padding: 10px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color:#a20a0a ;
+    border-style: solid;
+    border-width: 2px;
+    color: #f6eec9 ;
+    border-radius: 5px;
+}
+button:hover{
+    background-color:#f6eec9 ;
+    border-color:#a20a0a ;
+    color:#a20a0a ;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 50px;
+    color: #f6eec9;
+    background-color:#a20a0a ;
+
+    width: 100%;
+}
+.submit-order{
+    background-color:#a20a0a ;
+    border-color:#f6eec9  ;
+    color: #f6eec9 ;
+    float: right;
+    margin-top: 30px;
+}
+.submit-order:hover{
+    background-color:#f6eec9 ;
+    border-color:#a20a0a ;
+    color:#a20a0a ;
+}
+.delivery-img {
+    width: 300px;
+}
+h1{
+    font-size: 30px;
+    padding-top:  35px;
+}
+.gif{
+    width: 57%;
+}
+#subject{
+    width:92%;
+    height: 300px;
+}
+
+
+

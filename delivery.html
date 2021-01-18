@@ -3,44 +3,56 @@
 
 <head>
     <title>Delivery Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/delievery.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <h2>
-                codeWeavers Cuisine
-            </h2>
             <ul>
-                <li><a href="">contact us</a></li>
-                <li><a href="about-us.html">about us</a></li>
-            </ul>
+                <li><img id="logo" src="img/logo_transparent.png" alt=""></li>
+                <a href="index.html">
+                    <li class="li">Home</li>
+                </a>
+                <a href="menu.html">
+                    <li class="li">Main Menu</li>
+                </a>
+                <a href="make-your-own-meal.html">
+                    <li class="li">Make Your Food</li>
+                </a>
+                <a href="about-us.html">
+                    <li class="li">About Us</li>
+                </a>
 
+            </ul>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <form action="/delieveryInfo.html">
             <fieldset>
+                <legend>Delievery Info</legend>
                 <label for="fname">Your Name:</label>
-                <input type="text" id="fname" name="fname" required>
+                <input class="textfild" placeholder="Your Name" type="text" id="fname" name="fname" required>
 
                 <label for="city">City Name:</label>
-                <input type="text" id="cityId" name="city" required>
+                <input class="textfild" placeholder="City Name" type="text" id="cityId" name="city" required>
 
                 <label for="street">Street Name:</label>
-                <input type="text" id="streetId" name="street" required>
+                <input class="textfild" placeholder="Street Name" type="text" id="streetId" name="street" required>
 
                 <label for="building">Building Number:</label>
-                <input type="text" id="buildingId" name="building" required>
+                <input class="textfild" placeholder="Building Number" type="text" id="buildingId" name="building" required>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phoneId" name="phone" pattern="[0-7]{2}-[0-9]{3}-[0-9]{4}" required>
-                <small>Format: 07-456-7890</small>
+                <input class="textfild" type="tel" id="phoneId" name="phone" pattern="[0-7]{2}-[0-9]{3}-[0-9]{4}" placeholder="ex --> 07-456-7890" required>
+                <!-- <small>Format: 07-456-7890</small> -->
 
                 <!-- from the JS we add a listener in case the user choose Paypal or visa, a new field will show for further info -->
-                <div>
-                    <p>Payment Method: </p>
+                <div class="Payment-Method">
+                    <p >Payment Method: </p>
                     <input type="radio" id="visaCardId" name="payment" value="VisaCard">
                     <label for="VisaCard">Visa Card</label>
                     <input type="radio" id="payPalId" name="payment" value="payPal">
@@ -49,15 +61,46 @@
                     <label for="cash">Cash upon dilevery</label>
                 </div>
 
-                <label for="confirm">Confirm Delivery</label>
-                <input type="submit" id="confirmButtonIdId" name="confirm" required>
+                <label class="" for="confirm">Confirm Delivery</label>
+                <input class="submit-order" type="submit" id="confirmButtonIdId" name="confirm" required>
 
 
             </fieldset>
         </form>
 
-        <img src="https://pomokata.com/wp-content/uploads/2018/11/moto.png" alt="food delivery method"/>
+        <img class="delivery-img " src="https://pomokata.com/wp-content/uploads/2018/11/moto.png" alt="food delivery method" />
     </main>
+
+    <footer>
+        <div class="first-div">
+            <h4>Our Saftey Certificates</h4>
+            <ul>
+                <li>
+                    ISO 22000
+                </li>
+                <li>
+                    ISO 14001
+                </li>
+                <li>
+                    ISO 9001:2015
+                </li>
+            </ul>
+        </div>
+        <div class="second-div">
+            <h4>You Can Find Us On Social media</h4>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Snapchat</a></li>
+            </ul>
+        </div>
+        <div class="third-div">
+            <h4>This Website Was Designed By</h4>
+            <a href="https://github.com/codeweavers6">codeWeavers</a>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
