@@ -1,0 +1,107 @@
+/* done by ibrahim */
+body{
+    background-color: #f6eec9;
+    
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color:#a20a0a ;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+nav{
+    width: 75%;
+    position: fixed;
+    left: 25%;
+    
+}
+.li{
+    display: inline-block;
+    line-height: 80px;
+    color: #f6eec9;
+    margin-left: 80px;
+}
+.li:hover{
+    color: white;
+}
+.main{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 100px;
+}
+#logo{
+    width: 200px;
+    height: 80px;
+    float: left;
+    
+}
+
+footer {
+    margin-top: 50px;
+    color: #f6eec9;
+    background-color:#a20a0a ;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.first-div {
+    display: inline-block ;
+    width: 33%;
+    padding: 10px;
+}
+
+footer div h4 {
+    margin-left:10px ;
+    padding: 10px;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.second-div :link {
+    text-decoration: none;
+}
+
+.second-div ul li a {
+    color: #f6eec9;
+}
+
+.second-div {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+
+.third-div {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.third-div a:link {
+    text-decoration: none ;
+}
+
+.third-div h4, .third-div a {
+    color: #f6eec9;
+}
+
+.third-div a {
+    font-size: larger;
+}
+a:hover{
+    color: white;
+}
+

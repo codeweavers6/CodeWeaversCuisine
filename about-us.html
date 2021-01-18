@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about-me.css">
+    
+
     <title>Code Weavers Team</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
@@ -15,91 +21,27 @@
             margin: 0;
         }
 
-        header {
-            background-color: #f05454;
-            color: #222831;
-        }
 
-        header h2 {
-            display: inline-block;
-            margin-left: 10px;
-        }
-
-        header nav ul {
-            width: 70%;
-            display: inline-block;
-            text-align: right;
-        }
-
-        header nav ul li {
-            display: inline-block;
-            list-style-type: none;
-            margin-left: 20px;
-            font-size: larger;
-        }
-
-        header nav ul li a:link {
-            text-decoration: none;
-        }
-
-        header nav ul li a {
-            color: #222831;
-        }
-
-        main {
-            line-height: 1.5;
-        }
-
-        /* // headings classes  */
-        .heading {
-            font-size: 40px;
-        }
-
-        /* members section */
-        .member-profile-pic {
-            width: 200px;
-            height: 200px;
-            border: 5px solid #f05454;
-            border-radius: 90%;
-        }
-
-        #about-us {
-            margin: 20px 150px;
-            padding: 50px 0;
-        }
-
-        #team-bio {
-            background-color: #f05454;
-            color: #dddddd;
-            padding: 20px 150px;
-        }
-
-
-        .member {
-            display: inline-block;
-            width: 400px;
-            padding: 20px 10px;
-            margin: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <header class="red-background">
         <nav>
-            <h2>
-                codeWeaversRestaurant
-            </h2>
             <ul>
-                <li><a href="">contact us</a></li>
-                <li><a href="about-us.html">about us</a></li>
+                <li><img id="logo" src="img/logo_transparent.png" alt=""></li>
+                <a href="index.html"><li class="li">Home</li></a>
+                <a href="menu.html"><li class="li">Main Menu</li></a>
+                <a href="make-your-own-meal.html"><li class="li">Make Your Food</li></a>
+                <a href="about-us.html"><li class="li">About Us</li></a>
+
             </ul>
         </nav>
-
     </header>
-    <main>
-        <section id="about-us">
-            <h1 class="heading">Code Weavers Cuisine</h1>
+    <main class="main">
+        <section>
+            <h1>Code Weavers Cuisine</h1>
+
+
             <p>
                 Code Weavers started Code Weavers Cuisine because we Believe food taste matter and we found that usually
                 resturants do their food based only on menu and this menu tell us what we should taste, and we don't all
@@ -188,6 +130,36 @@
             </article>
         </section>
     </main>
+
+    <footer>
+        <div class="first-div">
+            <h4>Our Saftey Certificates</h4>
+            <ul>
+                <li>
+                    ISO 22000
+                </li>
+                <li>
+                    ISO 14001
+                </li>
+                <li>
+                    ISO 9001:2015
+                </li>
+            </ul>
+        </div>
+        <div class="second-div">
+            <h4>You Can Find Us On Social media</h4>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Snapchat</a></li>
+            </ul>
+        </div>
+        <div class="third-div">
+            <h4>This Website Was Designed By</h4>
+            <a href="https://github.com/codeweavers6">codeWeavers</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
