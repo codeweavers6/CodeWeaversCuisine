@@ -64,9 +64,10 @@ footer {
 .delivery-img {
     width: 300px;
 }
-h1{
+h1 ,h3 {
     font-size: 30px;
     padding-top:  35px;
+    padding-bottom: 20px;
 }
 .gif{
     width: 57%;
