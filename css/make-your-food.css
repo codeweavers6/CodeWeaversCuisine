@@ -9,7 +9,7 @@ fieldset{
     font-size: 20px;
     background-color: #fff5c0;
     color: #a20a0a;
-    margin-top: 50px;
+    margin-top: 199px;
 }
 input{
     padding: 10px;
@@ -45,9 +45,10 @@ footer {
     margin-top: 50px;
     color: #f6eec9;
     background-color:#a20a0a ;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 0px;
     width: 100%;
+    clear: right;
 }
 .submit-order{
     background-color:#a20a0a ;
