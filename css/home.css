@@ -73,16 +73,20 @@ th,tr,td{
     font-family: 'Merienda', cursive;
 }
 
-h3{
+summary {
     margin-top: 25px;
     padding-bottom: 30px;
     padding-top: 30px;
-    font-size: 35px;
+    font-size: 25px;
     font-family:'Merienda', cursive;
 }
 
+summary:hover {
+    cursor: pointer;
+}
+
 .customer-reviews{
-    font-size: 20px;
+    font-size: 23px;
     padding: 5px;
 }
 
@@ -136,6 +140,7 @@ section:nth-child(2) img:active {
     list-style-type: disc;
 }
 
+
 /* .active-cell-offer::before{
     content: "Offer";
     width: 300px;
@@ -168,3 +173,4 @@ section:nth-child(2) img:active {
     
     }
 } */
+
