@@ -47,6 +47,9 @@
         </nav>
     </header>
     <main class="main">
+        <div id="printReport">
+            <!-- here is going to print the report -->
+        </div>
         <form action="/delieveryInfo.html">
             <fieldset>
 
@@ -69,7 +72,7 @@
 
                 <!-- from the JS we add a listener in case the user choose Paypal or visa, a new field will show for further info -->
                 <div class="Payment-Method">
-                    <p >Payment Method: </p>
+                    <p id="myRadio">Payment Method: </p>
                     <input type="radio" id="visaCardId" name="payment" value="VisaCard">
                     <label for="VisaCard">Visa Card</label>
                     <input type="radio" id="payPalId" name="payment" value="payPal">
@@ -117,7 +120,7 @@
             <a href="https://github.com/codeweavers6">codeWeavers</a>
         </div>
     </footer>
-
+    <script src="js/makeMeal.js"></script>
 
 </body>
 

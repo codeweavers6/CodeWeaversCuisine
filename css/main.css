@@ -1,8 +1,5 @@
 /* done by ibrahim */
-body{
-    background-color: #f6eec9;
-    
-}
+
 a{
     text-decoration: none;
 }
@@ -139,3 +136,7 @@ a:hover{
 .third-div h4 {
     margin-top: 15px;
 }
+
+#main-menu-form {
+    display: none;
+  }
