@@ -111,6 +111,32 @@ a:hover{
     color: white;
 }
 
+.first-div ul li, .second-div ul li {
+    display: inline;
+}
+ 
+.first-div img {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.second-div li img {
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.first-div, .second-div, .third-div {
+    font-size: larger;
+}
+
+.third-div h4 {
+    margin-top: 15px;
+}
+
 #main-menu-form {
     display: none;
   }
