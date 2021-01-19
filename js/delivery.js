@@ -1,4 +1,6 @@
 'use strict';
+var feedback = [];
+
 //variables
 var cancelOrderFunction = document.getElementById('cancel_order_button');
 var checkStatus = document.getElementById('check_order_status');
@@ -9,14 +11,14 @@ function clearLocalStorage() {
     localStorage.removeItem("deliveryOrder");
     deliveryStatus.innerText = "Your Order has been Cancelled";
 }
-function checkStatusFunction() {
 
+function checkStatusFunction() {
     deliveryStatus.innerText = "Your Order is On Its Way";
 }
 function feedbackFunction() {
     // localStorage.feedbackButton;
-    var input = document.getElementById('subjectId').value;
-    localStorage.setItem('subjectName', input);
+    feedback.push(document.getElementById('subjectId').value);
+    localStorage.setItem('feedback', JSON.stringify(feedback));
 }
 
 //listeners
