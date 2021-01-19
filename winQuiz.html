@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Mystery Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,15 +18,10 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/delievery.css">
-
-
-    <title>Delivery Tracking</title>
+    <link rel="stylesheet" href="css/winstyle.css">
 </head>
 
 <body>
-
-
     <header>
         <nav>
             <ul>
@@ -47,33 +42,83 @@
             </ul>
         </nav>
     </header>
+    <main> 
+        
+        <section id="all_products">
+            <h1>Please Choose Your Favorite Meal Of These Dishes</h1>
+            <h2>Programmers Pay Extra Attention!</h2>
 
-    <main class="main">
-        <div class="head">
-            <h1 id="deliveryStatus">Your Order is Ready to Go</h1>
-        </div>
+            <div id="left_product">
+                <img id="left_product_img" src="" alt="meal1">
 
-        <div>
-            <img class="gif" src="https://media3.giphy.com/media/W5OnE0wl1G9B8HDLTP/source.gif" alt="delivery img" />
-            <button id="check_order_status">Check Order Status</button>
-            <button id="cancel_order_button">Cancel order</button>
-        </div>
-
-        <div>
-            <h3>What Do Your Think About Our Services</h3>
-            <div class="col-75">
-
-                <textarea id="subjectId" name="subjectName" class="textfild" placeholder="Write your feedback here!.."></textarea>
-                <button id="feedbackButton">Submit Feedback</button>
-                <button id="Quiz">Mystery Button</button>
+                <h2 id="left_product_h2"></h2>
             </div>
+
+            <div id="center_product">
+                <img id="center_product_img" src="" alt="meal2">
+
+                <h2 id="center_product_h2"></h2>
+
+            </div>
+
+            <div id="right_product">
+                <img id="right_product_img" src="" alt="meal3">
+
+                <h2 id="right_product_h2"></h2>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="button_banner">
+            <button id="back_button">Back to Delivery Info Page</button>
+            <button id="show_Chart2">Show line-bar Chart</button>
+            
         </div>
+        <section id="buttom_section">
+        </section>
+        <section>
+        <div id="priceDiv" class="priceClass">
+            <!-- here is to win a price  -->
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="chartClass">
+             <canvas  id="productChart2" width="100" height="100"></canvas>
+        </div>
+        </section>
 
     </main>
-
     <footer>
         <div class="first-div">
-            <h4>Our Saftey Certificates</h4>
+            <h4>We Are Certified By</h4>
             <ul>
                 <li>
                     <img src="img/iso-9001.jpg" alt="">
@@ -98,10 +143,9 @@
             <h4>This Website Was Designed By</h4>
             <a href="https://github.com/codeweavers6">codeWeavers</a>
         </div>
-    </footer>
-    <!-- <script src="js/makeMeal.js"></script> -->
-    <script src="js/delivery.js"></script>
-
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/winapp.js"></script>
 </body>
 
 </html>

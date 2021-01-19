@@ -5,6 +5,8 @@ var feedback = [];
 var cancelOrderFunction = document.getElementById('cancel_order_button');
 var checkStatus = document.getElementById('check_order_status');
 var feedbackBtn = document.getElementById('feedbackButton');
+var quizBtn =  document.getElementById('Quiz');
+
 //functions
 function clearLocalStorage() {
     checkStatus.removeEventListener('click', checkStatusFunction);
@@ -20,8 +22,12 @@ function feedbackFunction() {
     feedback.push(document.getElementById('subjectId').value);
     localStorage.setItem('feedback', JSON.stringify(feedback));
 }
+function quizFunction(){
+    document.location = 'winQuiz.html';
+}
 
 //listeners
 cancelOrderFunction.addEventListener('click', clearLocalStorage);
 checkStatus.addEventListener('click', checkStatusFunction);
 feedbackBtn.addEventListener('click', feedbackFunction);
+quizBtn.addEventListener('click', quizFunction);
