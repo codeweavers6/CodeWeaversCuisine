@@ -66,13 +66,14 @@ footer {
 .insideDiv{
     width: 30%;
     height: 400px;
-    background-color: #f6eec9;
+    background-color: white;
     border: 2px #a20a0a  solid;
     position: fixed;
     left: 35%;
     top: 250px;
     border-radius: 5px;
     z-index: 20;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.26), 0 6px 20px 0 rgba(31, 31, 31, 0.281);
 
 }
 
