@@ -2,6 +2,7 @@
 var menu = document.getElementById('meals-list');         // menu container
 var displayFormButton = document.getElementById('add-meal-button');   // display form
 var addMealToMenuForm = document.getElementById('main-menu-form')    // add form to main container
+
 var menuList = [];  // list of meals objects
 var submitIngredients = [];   // get user ingredients
 // ........................................................ Data Model properties + methods + objects
@@ -90,7 +91,6 @@ function displayForm() {   // display form funtion
 
 function addNewMeal(event) {   // take meal information from user
     event.preventDefault();
-
     menu.innerHTML = '';
     var name = event.target.name.value;
     var image = event.target.image.value;
@@ -109,14 +109,13 @@ function addNewMeal(event) {   // take meal information from user
 function addListToStorage() {
     localStorage.setItem('menu', JSON.stringify(menuList))
 }
-
 function getFromListStorage() {
     if (localStorage.length > 0) {
         menuList = JSON.parse(localStorage.getItem('menu'));
     }
 }
-// executable code
+// ...........................executable code
 displayFormButton.addEventListener('click', displayForm); // add new meal
 addMealToMenuForm.addEventListener('submit', addNewMeal); // submit
-getFromListStorage()
+getFromListStorage();
 displayMeals();
