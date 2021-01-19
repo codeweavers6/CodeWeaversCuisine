@@ -18,7 +18,7 @@ function MainMenu(name, url, ingredients) {
         return this.price = setPrice;
     }
     menuList.push(this);
-    localStorage.setItem('menu', JSON.stringify(menuList))
+
 }
 var fattoushSalad = new MainMenu('Arabic Fattoush Salad', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5Oi8p3Z83V51GhVzCymoup-u8SvcBB5OVw&usqp=CAU",
     [
@@ -81,7 +81,6 @@ var barbecue = new MainMenu(' Barbecue', 'https://cdn.pixabay.com/photo/2016/04/
     ]);
 barbecue.setPrice();
 
-console.log(menuList)
 function displayMeals() { // render meals on screen
     for (var i = 0; i < menuList.length; i++) {
         createMeal(menuList[i])
@@ -90,16 +89,23 @@ function displayMeals() { // render meals on screen
 // ................................................................. menu creation functions
 function createMeal(meal) {  // add meal to html
     var div = document.createElement('div');  // create container div
+    div.setAttribute('class', 'meal')
     menu.appendChild(div);
 
-    var imgDiv = document.createElement('div')
+    var imgDiv = document.createElement('div');
+    imgDiv.setAttribute('class', 'img-div')
     div.append(imgDiv)
+
+    var infoDiv = document.createElement('div')
+    infoDiv.setAttribute('class', 'info-div')
+    div.append(infoDiv)
+
     var img = document.createElement('img'); // add image
     img.setAttribute('src', meal.imgUrl)
     imgDiv.append(img)
 
     var h1 = document.createElement('h1');  // add name and price
-    div.append(h1);
+    infoDiv.append(h1);
 
     var b = document.createElement(`b`);  // name bold
     b.textContent = meal.name;
@@ -107,18 +113,18 @@ function createMeal(meal) {  // add meal to html
 
     var h3 = document.createElement('h3'); // price
     h3.innerText = ` ${meal.price}$`
-    div.append(h3);
+    infoDiv.append(h3);
 
     for (var i = 0; i < meal.ingredients.length; i++) {  // add ingredients
         var p2 = document.createElement('p');
         p2.textContent = meal.ingredients[i];
-        div.append(p2);
+        infoDiv.append(p2);
     }
 
     var button = document.createElement('button');
     button.setAttribute('onClick', "window.location.href='delivery.html';")
     button.textContent = 'Buy Meal';
-    div.append(button);
+    infoDiv.append(button);
 }
 
 function displayForm() {   // display form funtion
@@ -135,22 +141,26 @@ function addNewMeal(event) {   // take meal information from user
 
     var newMeal = new MainMenu(name, image, ingredient);  // add it to consturctor
     newMeal.setPrice();
+
+
+    addToLocalStorage()
+    getFromListStorage()
     displayMeals(); // display  element
 
     addMealToMenuForm.style.display = 'none'; // hide form after submit
 }
 // ............................ data storage functions 
-
+function addToLocalStorage() {
+    localStorage.setItem('menu', JSON.stringify(menuList))
+}
 function getFromListStorage() {
     if (localStorage.length > 0) {
         menuList = JSON.parse(localStorage.getItem('menu'));
     }
 }
 // ...........................executable code
-
 displayFormButton.addEventListener('click', displayForm); // add new meal
 addMealToMenuForm.addEventListener('submit', addNewMeal); // submit
 
 getFromListStorage();
 displayMeals();
-
