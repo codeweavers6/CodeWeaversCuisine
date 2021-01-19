@@ -27,7 +27,7 @@ input{
 
 }
 .textfild{
-    width: 90%;
+    width: 95%;
 }
 label{
     padding: 10px;
@@ -87,7 +87,7 @@ h1 ,h3 {
 }
 #subject{
     width:92%;
-    height: 300px;
+    height: 180px;
 }
 
 

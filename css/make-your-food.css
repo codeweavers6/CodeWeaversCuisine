@@ -63,5 +63,36 @@ footer {
     color:#a20a0a ;
 }
 
+.insideDiv{
+    width: 30%;
+    height: 400px;
+    background-color: #f6eec9;
+    border: 2px #a20a0a  solid;
+    position: fixed;
+    left: 35%;
+    top: 250px;
+    border-radius: 5px;
+    z-index: 20;
+
+}
+
+.btn-reportConfirm{
+    float: right;
+    position: relative;
+    bottom: 0px;
+}
+.reportDiv{
+    width: 30%;
+    height: 310px;
+    font-size: 20px;
+}
+legend{
+    background-color: white;
+    border-radius: 5px;
+    border: 4px #a20a0a ;
+    font-size: 40px;
+    border-style: double;
+}
+
 
 
