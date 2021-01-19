@@ -37,34 +37,46 @@
 
     <main class="main">
         <section>
+            <div id="printReport" class="reportDiv">
+                <!-- here is going to print the report -->
+                <button class="btn-reportConfirm">Confirm</button>
+                <button  class="btn-reportConfirm">Cancel</button>
+            </div>
             <div>
                 <form id="Main-dish">
 
-                    <fieldset>
+                    <fieldset id="customerFormId">
 
                         <legend>Main dish</legend>
 
                         <div>
+                            <label>Meal Name  :</label>
+                            <label><input name="mealNameName" placeholder="Meal Name" class="textf" type="text"></label>
+                        </div>
+
+                        <div>
                             <label>First Ingredient :</label>
-                            <label><input placeholder="First Ingredient" class="textf" type="text"></label>
+                            <label><input name="firstIngredientName" placeholder="First Ingredient" class="textf" type="text"></label>
                         </div>
 
                         <div>
                             <label>Second Ingredient :</label>
-                            <label><input placeholder="Second Ingredient" class="textf" type="text"></label>
+                            <label><input name="secondIngredientName" placeholder="Second Ingredient" class="textf" type="text"></label>
                         </div>
+                        <div id="addmoreIngreds">
 
+                        </div>
                         <div>
-                            <button>Add More Ingredient ...</button>
+                            <button id="addIngredientId">Add More Ingredient ...</button>
                         </div>
 
 
                         <div>
                             <label>Which type Of meat You like :</label>
-                            <label>chicken-5$</label>
+                            <label>Chicken-5$</label>
                             <input type="radio" name="meat-type">
 
-                            <label>meat-10$</label>
+                            <label>Meat-10$</label>
                             <input type="radio" name="meat-type">
                         </div>
 
@@ -84,7 +96,7 @@
                         <div>
                             <input class="submit-order" id="submit-order" type="submit">
                         </div>
-
+                       
                     </fieldset>
 
                 </form>
@@ -128,6 +140,7 @@
             <a href="https://github.com/codeweavers6">codeWeavers</a>
         </div>
     </footer>
+    <script src="js/makeMeal.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,11 @@
 'use strict';
-var displayFormButton = document.getElementById(`add-meal-button`);
-var submitButton = document.getElementById('submit-button');
-var menu = document.getElementById('meals-list');  // meals container
-var menuContainer = document.getElementById('form') // add form to main container
+var menu = document.getElementById('meals-list');         // menu container
+var displayFormButton = document.getElementById('add-meal-button');   // display form
+var addMealToMenuForm = document.getElementById('main-menu-form')    // add form to main container
 
 var menuList = [];  // list of meals objects
-var submitIngredients = [];   // get user data
-var menuSotrage = [];
-
+var submitIngredients = [];   // get user ingredients
+// ........................................................ Data Model properties + methods + objects
 function MainMenu(name, url, ingredients) {
     this.name = name;
     this.imgUrl = url;
@@ -20,7 +18,6 @@ function MainMenu(name, url, ingredients) {
     }
     menuList.push(this);
 }
-
 var fattoushSalad = new MainMenu('Arabic Fattoush Salad', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5Oi8p3Z83V51GhVzCymoup-u8SvcBB5OVw&usqp=CAU",
     [
         'vegetable oil',
@@ -55,7 +52,7 @@ function displayMeals() { // render meals on screen
         createMeal(menuList[i])
     }
 }
-
+// ................................................................. menu creation functions
 function createMeal(meal) {  // add meal to html
     var div = document.createElement('div');  // create container div
     menu.appendChild(div);
@@ -88,42 +85,37 @@ function createMeal(meal) {  // add meal to html
     menu.appendChild(hr);
 }
 
-function displayForm() {   // display form 
-    form.style.display = 'block';
+function displayForm() {   // display form funtion
+    addMealToMenuForm.style.display = 'block';
 }
 
-function addNewMeal(event) {   // submit meal from form to constructor
+function addNewMeal(event) {   // take meal information from user
     event.preventDefault();
     menu.innerHTML = '';
     var name = event.target.name.value;
     var image = event.target.image.value;
     var ingredient = event.target.ingredient.value;
-    submitIngredients.push(ingredient.split(','));
+    ingredient = ingredient.split(',')
+
     var newMeal = new MainMenu(name, image, ingredient);  // add it to consturctor
     newMeal.setPrice();
+
     addListToStorage() // after object has been created
-
     displayMeals(); // display  element
-    submitIngredients = [];
 
-    form.style.display = 'none'; // hide form after submit
+    addMealToMenuForm.style.display = 'none'; // hide form after submit
 }
-
+// ............................ data storage functions 
 function addListToStorage() {
-
     localStorage.setItem('menu', JSON.stringify(menuList))
-
 }
 function getFromListStorage() {
     if (localStorage.length > 0) {
         menuList = JSON.parse(localStorage.getItem('menu'));
     }
-    console.log(menuList)
 }
-
+// ...........................executable code
 displayFormButton.addEventListener('click', displayForm); // add new meal
-
-form.addEventListener('submit', addNewMeal); // submit
-
-getFromListStorage()
+addMealToMenuForm.addEventListener('submit', addNewMeal); // submit
+getFromListStorage();
 displayMeals();

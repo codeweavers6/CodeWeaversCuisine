@@ -1,0 +1,57 @@
+#main-menu-form {
+    display: none;
+  }
+.main{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 135px;
+}
+
+#theMenu {
+    text-align: center;
+    color: #a20a0a;
+    font-size: 64px!important;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+#meals-list img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    border-radius: 50%;
+
+}
+
+p2 {
+    color: #a20a0a;
+    text-align: center;
+    font-size: 21px!;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+
+div h1 {
+    color: #a20a0a;
+    text-align: center;
+    font-size: 30px!important;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+Button {
+    
+    background-color:#a20a0a; 
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50%
+}
