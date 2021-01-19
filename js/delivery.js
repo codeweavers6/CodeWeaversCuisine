@@ -23,12 +23,3 @@ function feedbackFunction() {
 cancelOrderFunction.addEventListener('click', clearLocalStorage);
 checkStatus.addEventListener('click', checkStatusFunction);
 feedbackBtn.addEventListener('click', feedbackFunction);
-
-
-
-
-
-
-
-
-// document.getElementById('subjectId').value = localStorage.getItem('subjectName');
