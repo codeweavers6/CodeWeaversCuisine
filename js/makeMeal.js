@@ -85,6 +85,7 @@ function submitIngrenientFunction(event) {
     }
     var addingMeal = new CustomerMeal(mealNew, arrayofIngredients, true, true, true, true, true);
     console.log(addingMeal);
+    localStorage.setItem("deliveryOrder", JSON.stringify(addingMeal));
     storeData();
     document.location = 'delivery.html';
 
