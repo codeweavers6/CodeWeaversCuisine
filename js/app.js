@@ -1,10 +1,9 @@
 ' use strict ';
 
 var arrayOfFood = [];
-var arrayOfPaths = ['food1.jpg','food2.jpg'];
-var arrayOfIngredients = ['Salt.Peper.Garlic','Onion.Bell peper.Parsley']; 
+var arrayOfPaths = ['food1.jpg', 'food2.jpg', '', 'food1.jpg', 'food2.jpg'];
+var arrayOfIngredients = ['Salt.Peper.Garlic', 'Onion.Bell peper.Parsley', '', 'Salt.Peper.Garlic', 'Onion.Bell peper.Parsley'];
 var arrayOfPrices = [];
-
 var getFoodId = 0;
 
 var arrayOfStoredFood = [];
@@ -18,6 +17,7 @@ var forthItem = document.getElementById("forth-item");
 var fifthItem = document.getElementById("fifth-item");
 var sixthItem = document.getElementById("sixth-item");
 var arrayOfItems = [firstItem, secondItem, thirdItem, forthItem, fifthItem, sixthItem];
+// console.log(firstItem.id);
 
 var firstIngredients = document.getElementById("first-ingredients");
 var secondIngredients = document.getElementById("second-ingredients");
@@ -30,9 +30,10 @@ var arrayOfIngredientsOfList = [firstIngredients, secondIngredients, thirdIngred
 var table = document.getElementById('table');
 
 var cartButton = document.getElementById("cart-button");
+var clearShoppingCart = document.getElementById("clear-shopping-cart");
 
 
-function Meals(name, path, ingredients, price) {
+function Meals(path, ingredients, price) {
     this.path = 'img/' + path;
     this.name = path.split('.')[0];
     this.ingredients = ingredients;
@@ -41,15 +42,15 @@ function Meals(name, path, ingredients, price) {
 }
 
 function genRandomPrice() {
-    return Math.round(Math.random()*(5-3)+3); 
+    return Math.round(Math.random() * (5 - 3) + 3);
 }
 
-function genRandomIndex() {
-    return Math.floor(Math.random()*arrayOfFood.length/2);
-}
+// function genRandomIndex() {
+//     return Math.floor(Math.random()*arrayOfFood.length/2);
+// }
 
 for (var index = 0; index < arrayOfPaths.length; index++) {
-    new Meals(arrayOfPaths[index],arrayOfIngredients[index].split('.'),genRandomPrice());
+    new Meals(arrayOfPaths[index], arrayOfIngredients[index].split('.'), genRandomPrice());
     // console.log(arrayOfFood[index].name);
     // console.log(arrayOfFood[index].path);
     // console.log(arrayOfFood[index].ingredients);
@@ -63,14 +64,14 @@ function renderSixItems() {
         arrayOfItems[index2].textContent = arrayOfFood[index2].name;
         arrayOfIngredientsOfList[index2].textContent = arrayOfFood[index2].ingredients;
         // console.log(arrayOfFood[index2].ingredients);
-    }   
+    }
 }
 // console.log(arrayOfFood);
 renderSixItems();
 
 function storeFood() {
     // console.log(1);
-    localStorage.setItem('arrayOfStoredFood', JSON.stringify(arrayOfStoredFood)); 
+    localStorage.setItem('arrayOfStoredFood', JSON.stringify(arrayOfStoredFood));
 }
 
 
@@ -81,23 +82,36 @@ function retrieveFood() {
 }
 
 function redirect(event) {
-    if (localStorage.length > 0){
+    if (localStorage.length > 0) {
         document.location = 'delivery.html';
+    } else {
+        alert('Your cart is empty');
     }
 }
 
-function checkClick(event){
-    var checkId = event.target.id ;
-    console.log(checkId);
+function clearCart(event) {
+    if (localStorage.length > 0) {
+        localStorage.clear();
+        alert('Your cart was cleared');
+    } else {
+        alert('Your cart is empty already');
+    }
+}
+
+function checkClick(event) {
+    var checkId = event.target.id;
+    // console.log(checkId);
     for (let index3 = 0; index3 < arrayOfClickedItems.length; index3++) {
-        if (checkId === arrayOfClickedItems[index3]){
+        if (checkId === arrayOfClickedItems[index3] || checkId === arrayOfItems[index3].id || checkId === arrayOfIngredientsOfList[index3].id) {
             arrayOfStoredFood.push(arrayOfFood[index3]);
-            console.log(arrayOfFood[index3]);
+            // console.log(arrayOfFood[index3]);
             storeFood();
         }
     }
 }
 
-table.addEventListener('click',checkClick);
+table.addEventListener('click', checkClick);
 
-cartButton.addEventListener('click',redirect);
+cartButton.addEventListener('click', redirect);
+
+clearShoppingCart.addEventListener('click', clearCart);
