@@ -99,3 +99,17 @@ h1 ,h3 {
 }
 
 
+@keyframes headerAnimation {
+    from {columns: #121212;;}
+    to {color:#A20A0A;}
+  }
+  
+  h1 {
+    animation-name: headerAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-weight: bolder;
+  }
+
+
+
