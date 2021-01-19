@@ -1,5 +1,7 @@
 /* done by ibrahim */
-
+body{
+    background-color:#f6eec9 ;
+}
 a{
     text-decoration: none;
 }
@@ -14,8 +16,8 @@ header{
 nav{
     width: 100%;
     position: fixed;
-    left: 3%;
-    font-family:'Yellowtail', cursive;
+    left: 5%;
+    font-family:'Dancing Script', cursive;
     height: 110px;
 
 }
@@ -25,7 +27,9 @@ nav{
     color: #f6eec9;
     margin-left: 150px;
     float: left;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
+    position: relative;
+    right:50px;
     
 }
 .li:hover{
@@ -44,7 +48,7 @@ nav{
     z-index: 2;
     position: relative;
     top:-70px;
-    right:20px;
+    right:30px;
     
 }
 
@@ -155,7 +159,7 @@ a:hover{
 
     .li{
         position: relative;
-        right:100px;
+        right:150px;
     }
 
     #logo{
@@ -167,5 +171,9 @@ a:hover{
         top:-45px;
         right:20px;
         
+    }
+
+    #logo{
+        right: 50px;
     }
 } 
