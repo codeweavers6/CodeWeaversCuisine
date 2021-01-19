@@ -16,6 +16,11 @@
     font-weight: 400;
     margin-bottom: 50px;
 }
+/* #meals-list div{
+    display: inline-bock;
+    width: 45%;
+
+} */
 
 #meals-list img {
     display: block;
@@ -26,7 +31,7 @@
 
 }
 
-p2 {
+p {
     color: #a20a0a;
     text-align: center;
     font-size: 21px!;

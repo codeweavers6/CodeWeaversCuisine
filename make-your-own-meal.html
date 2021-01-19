@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/make-your-food.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
 
     <title>Make Your Meal</title>
@@ -42,9 +42,9 @@
         <section>
             <div id="printReport" class="insideDiv">
                 <!-- here is going to print the report -->
-                <div class="reportDiv"></div>
-                <button class="btn-reportConfirm">Confirm</button>
-                <button  class="btn-reportConfirm">Cancel</button>
+                <div id='reportDiv' class="reportDiv"></div>
+                <button id="btn-reportConfirm" class="btn-reportConfirm">Confirm</button>
+                <button id="btn-cancelConfirm" class="btn-reportConfirm">Cancel</button>
             </div>
             <div>
                 <form id="Main-dish">
@@ -54,18 +54,20 @@
                         <legend>Main dish</legend>
 
                         <div>
-                            <label>Meal Name  :</label>
+                            <label>Meal Name :</label>
                             <label><input name="mealNameName" placeholder="Meal Name" class="textf" type="text"></label>
                         </div>
 
                         <div>
                             <label>First Ingredient :</label>
-                            <label><input name="firstIngredientName" placeholder="First Ingredient" class="textf" type="text"></label>
+                            <label><input name="firstIngredientName" placeholder="First Ingredient"
+                                    class="textf input-item" type="text"></label>
                         </div>
 
                         <div>
                             <label>Second Ingredient :</label>
-                            <label><input name="secondIngredientName" placeholder="Second Ingredient" class="textf" type="text"></label>
+                            <label><input name="secondIngredientName" placeholder="Second Ingredient"
+                                    class="textf input-item" type="text"></label>
                         </div>
                         <div id="addmoreIngreds">
 
@@ -94,13 +96,10 @@
                             <input type="radio" name="cook-type">
                         </div>
 
-
-
-
                         <div>
                             <input class="submit-order" id="submit-order" type="submit">
                         </div>
-                       
+
                     </fieldset>
 
                 </form>

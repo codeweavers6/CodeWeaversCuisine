@@ -4,9 +4,9 @@ var displayFormButton = document.getElementById('add-meal-button');   // display
 var addMealToMenuForm = document.getElementById('main-menu-form')    // add form to main container
 
 var menuList = [];  // list of meals objects
+
 var submitIngredients = [];   // get user ingredients
 // ........................................................ Data Model properties + methods + objects
-
 function MainMenu(name, url, ingredients) {
     this.name = name;
     this.imgUrl = url;
@@ -18,6 +18,7 @@ function MainMenu(name, url, ingredients) {
         return this.price = setPrice;
     }
     menuList.push(this);
+    localStorage.setItem('menu', JSON.stringify(menuList))
 }
 var fattoushSalad = new MainMenu('Arabic Fattoush Salad', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5Oi8p3Z83V51GhVzCymoup-u8SvcBB5OVw&usqp=CAU",
     [
@@ -79,6 +80,8 @@ var barbecue = new MainMenu(' Barbecue', 'https://cdn.pixabay.com/photo/2016/04/
         'Wine and Herb Marinade'
     ]);
 barbecue.setPrice();
+
+console.log(menuList)
 function displayMeals() { // render meals on screen
     for (var i = 0; i < menuList.length; i++) {
         createMeal(menuList[i])
@@ -89,9 +92,11 @@ function createMeal(meal) {  // add meal to html
     var div = document.createElement('div');  // create container div
     menu.appendChild(div);
 
+    var imgDiv = document.createElement('div')
+    div.append(imgDiv)
     var img = document.createElement('img'); // add image
     img.setAttribute('src', meal.imgUrl)
-    div.append(img)
+    imgDiv.append(img)
 
     var h1 = document.createElement('h1');  // add name and price
     div.append(h1);
@@ -114,9 +119,6 @@ function createMeal(meal) {  // add meal to html
     button.setAttribute('onClick', "window.location.href='delivery.html';")
     button.textContent = 'Buy Meal';
     div.append(button);
-
-    var hr = document.createElement('hr');  // create container div
-    menu.appendChild(hr);
 }
 
 function displayForm() {   // display form funtion
@@ -133,23 +135,22 @@ function addNewMeal(event) {   // take meal information from user
 
     var newMeal = new MainMenu(name, image, ingredient);  // add it to consturctor
     newMeal.setPrice();
-
-    addListToStorage() // after object has been created
     displayMeals(); // display  element
 
     addMealToMenuForm.style.display = 'none'; // hide form after submit
 }
 // ............................ data storage functions 
-function addListToStorage() {
-    localStorage.setItem('menu', JSON.stringify(menuList))
-}
+
 function getFromListStorage() {
     if (localStorage.length > 0) {
         menuList = JSON.parse(localStorage.getItem('menu'));
     }
 }
 // ...........................executable code
+
 displayFormButton.addEventListener('click', displayForm); // add new meal
 addMealToMenuForm.addEventListener('submit', addNewMeal); // submit
+
 getFromListStorage();
 displayMeals();
+

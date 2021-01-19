@@ -6,19 +6,17 @@ var arrayOfCustomerMeal = [];
 var addIngredient = document.getElementById("addIngredientId");
 var submitIngredient = document.getElementById("Main-dish");
 // var cancelOrder= document.getElementById('cancel_order_button');
-
+var printReportForm = document.getElementById('printReport')
+var cancelOrderButton = document.getElementById('btn-cancelConfirm');
+var confirmOrderButton = document.getElementById('btn-reportConfirm');
+var reportDiv = document.getElementById('reportDiv');
 var counter = 3;
 
 
 // Constractor
-function CustomerMeal(name, ingredient, chiken, meat, fried, grilled, steamed) {
+function CustomerMeal(name, ingredient) {
     this.mealName = name;
     this.mealIngredient = ingredient;
-    this.isChicken = chiken;
-    this.isMeat = meat;
-    this.isFried = fried;
-    this.isGrilled = grilled;
-    this.isSteamed = steamed;
     arrayOfCustomerMeal.push(this);
 }
 
@@ -48,73 +46,65 @@ function addIngredientFunction(event) {
     input.setAttribute("class", "textf");
     input.setAttribute("type", "text");
     input.setAttribute("name", "extraIngredient")
+    input.setAttribute('class', 'input-item')
     parentelement.appendChild(input);
     console.log(parentelement);
+
     counter++;
+
 
     //    var newIngredient= event.target.extraIngredient.value;
     //    CustomerMeal.mealIngredient.push(newIngredient);
     //    console.log(  CustomerMeal.mealIngredient);
 }
 
-// Listener function for submiting the form
 function submitIngrenientFunction(event) {
+    var inputListFromHtml = document.getElementsByClassName('input-item')
     event.preventDefault();
     var arrayofIngredients = [];
-    while (counter > 0) {
-        var mealNew = event.target.mealNameName.value;
+    var mealNew = event.target.mealNameName.value;
 
-        var firstIngredientNew = event.target.firstIngredientName.value;
-        var secondIngredientNew = event.target.secondIngredientName.value;
-        var test = document.getElementsByClassName("textf");
-
-
-        arrayofIngredients = [firstIngredientNew, secondIngredientNew];
-        if (test.length > 3) {
-            //var newIngredient = event.target.extraIngredient.value;
-            for (let index = 3; index < test.length; index++) {
-                arrayofIngredients.push(test[index].value);
-
-            }
-
-            console.log(arrayofIngredients);
-        }
-        // arrayofIngredients.push(newIngredient);
-
-        counter--;
+    for (var i = 0; i < inputListFromHtml.length; i++) {
+        arrayofIngredients.push(inputListFromHtml[i].value)
     }
-    var addingMeal = new CustomerMeal(mealNew, arrayofIngredients, true, true, true, true, true);
-    console.log(addingMeal);
+
+    var addingMeal = new CustomerMeal(mealNew, arrayofIngredients);
     localStorage.setItem("deliveryOrder", JSON.stringify(addingMeal));
-    storeData();
-    document.location = 'delivery.html';
 
+    ingredientsReport(addingMeal)
+    if (addingMeal.name !== undefined || addingMeal.name !== '') {
+        ingredientsReport(addingMeal)
+        printReportForm.style.display = 'block';
+    }
 }
-//function to cancel the order
-// function cancelOrderFunction(){
-//     localStorage.clear();
-// }
-
-
 
 // //function to create a report for the customer of the order
 //make a dely
-// function ingredientsReport() {
-//     var parentelement = document.getElementById('printReport');
-//     var header = document.createElement('h2');
-//     header.textContent = 'You Ordered: ';
-//     parentelement.appendChild(header);
-//     var par = document.createElement('p');
-//     par.textContent = "`Your have chose ${ addingMeal.mealName} `";
-//     parentelement.appendChild(par);
-// }
-// ingredientsReport();
+function ingredientsReport(addingMeal) {
+    console.log(addingMeal)
+    storeData();
+    reportDiv.innerHTML = '';
+    var header = document.createElement('h2');
+    header.textContent = `Meal Name: ${addingMeal.mealName}`;
+    reportDiv.appendChild(header);
+    for (var i = 0; i < addingMeal.mealIngredient.length; i++) {
+        var par = document.createElement('p');
+        par.setAttribute('required', 'required')
+        par.textContent = `Ingredient ${addingMeal.mealIngredient[i]}`;
+        reportDiv.appendChild(par);
+    }
+}
 
+function displayReport() {
+    document.location = 'delivery.html';
+}
+function cancelReport() {
+    printReportForm.style.display = 'none';
+}
 //listener
-//listner to add more ingredients
-addIngredient.addEventListener('click', addIngredientFunction);
+
+addIngredient.addEventListener('click', addIngredientFunction); //listner to add more ingredients
 // listner to submit the form
 submitIngredient.addEventListener('submit', submitIngrenientFunction);
-// console.log(submitIngredient);
-//listner to cancel the order
-// cancelOrder.addEventListener('click', cancelOrderFunction);
+cancelOrderButton.addEventListener('click', cancelReport)
+confirmOrderButton.addEventListener('click', displayReport)
