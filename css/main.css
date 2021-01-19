@@ -14,7 +14,7 @@ header{
 nav{
     width: 100%;
     position: fixed;
-    left: 5%;
+    left: 3%;
     font-family:'Yellowtail', cursive;
     height: 110px;
 
@@ -23,9 +23,9 @@ nav{
     display: inline;
     line-height: 110px;
     color: #f6eec9;
-    margin-left: 100px;
+    margin-left: 150px;
     float: left;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     
 }
 .li:hover{
@@ -111,6 +111,10 @@ a:hover{
     color: white;
 }
 
+
+
+
+
 .first-div ul li, .second-div ul li {
     display: inline;
 }
@@ -140,3 +144,28 @@ a:hover{
 #main-menu-form {
     display: none;
   }
+
+@media only screen and (max-width:1600px) {
+    .main{
+        width: 65%;
+        position: relative;
+        left: 20%;
+        margin-top: 100px;
+    }
+
+    .li{
+        position: relative;
+        right:100px;
+    }
+
+    #logo{
+        width: 200px;
+        height: 180px;
+        float: left;
+        z-index: 2;
+        position: relative;
+        top:-45px;
+        right:20px;
+        
+    }
+} 
