@@ -140,3 +140,37 @@ section:nth-child(2) img:active {
     list-style-type: disc;
 }
 
+
+/* .active-cell-offer::before{
+    content: "Offer";
+    width: 300px;
+    background-color: #a20a0a;
+    color: #fff5c0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    transform: rotate(40deg);
+    padding: 10px 20px 10px 0px;
+    font-size: 14px;
+    font-weight: bolder;
+    bottom: 60%;  
+    left:64%; 
+
+}
+.active-cell-offer{
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+@media only screen and (max-width:1600px){
+    .active-cell-offer::before{
+        
+        bottom: 60%;  
+        left:60%; 
+    
+    }
+} */
+
