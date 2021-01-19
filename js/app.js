@@ -1,15 +1,20 @@
 ' use strict ';
 
+//====================================================================================================
+//// Defining VARIABLES AND ARRAYS THAT WE ARE GONNA USE 
+
+// Variables and arrays related to the constructor
 var arrayOfFood = [];
 var arrayOfPaths = ['food1.jpg', 'food2.jpg', '', 'food1.jpg', 'food2.jpg'];
 var arrayOfIngredients = ['Salt.Peper.Garlic', 'Onion.Bell peper.Parsley', '', 'Salt.Peper.Garlic', 'Onion.Bell peper.Parsley'];
 var arrayOfPrices = [];
 var getFoodId = 0;
-
 var arrayOfStoredFood = [];
 
+// Table data (td) IDs
 var arrayOfClickedItems = ["one", "two", "three", "four", "five", "six"];
 
+// IDs for (p) in each (li) in the HTML file
 var firstItem = document.getElementById("first-item");
 var secondItem = document.getElementById("second-item");
 var thirdItem = document.getElementById("third-item");
@@ -17,22 +22,15 @@ var forthItem = document.getElementById("forth-item");
 var fifthItem = document.getElementById("fifth-item");
 var sixthItem = document.getElementById("sixth-item");
 var arrayOfItems = [firstItem, secondItem, thirdItem, forthItem, fifthItem, sixthItem];
-// console.log(firstItem.id);
-
-var firstIngredients = document.getElementById("first-ingredients");
-var secondIngredients = document.getElementById("second-ingredients");
-var thirdIngredients = document.getElementById("third-ingredients");
-var forthIngredients = document.getElementById("forth-ingredients");
-var fifthIngredients = document.getElementById("fifth-ingredients");
-var sixthIngredients = document.getElementById("sixth-ingredients");
-var arrayOfIngredientsOfList = [firstIngredients, secondIngredients, thirdIngredients, forthIngredients, fifthIngredients, sixthIngredients];
 
 var table = document.getElementById('table');
 
+// Two buttons one is to check the cart and redirect the user to checkout page and the other one is to clear the cart
 var cartButton = document.getElementById("cart-button");
 var clearShoppingCart = document.getElementById("clear-shopping-cart");
 
-
+//====================================================================================================
+//Constructor for the meals
 function Meals(path, ingredients, price) {
     this.path = 'img/' + path;
     this.name = path.split('.')[0];
@@ -41,14 +39,15 @@ function Meals(path, ingredients, price) {
     arrayOfFood.push(this);
 }
 
+//====================================================================================================
+////DECLARING FUNCTIONS
+
+//Function that generates random price which will be assgined for each meal
 function genRandomPrice() {
     return Math.round(Math.random() * (5 - 3) + 3);
 }
 
-// function genRandomIndex() {
-//     return Math.floor(Math.random()*arrayOfFood.length/2);
-// }
-
+//Assigning values to the contructor's properties 
 for (var index = 0; index < arrayOfPaths.length; index++) {
     new Meals(arrayOfPaths[index], arrayOfIngredients[index].split('.'), genRandomPrice());
     // console.log(arrayOfFood[index].name);
@@ -57,20 +56,20 @@ for (var index = 0; index < arrayOfPaths.length; index++) {
 }
 
 retrieveFood();
-// console.log(arrayOfFood);
 
+//Render the food in the table
 function renderSixItems() {
     for (let index2 = 0; index2 < arrayOfFood.length; index2++) {
-        arrayOfItems[index2].textContent = arrayOfFood[index2].name;
-        arrayOfIngredientsOfList[index2].textContent = arrayOfFood[index2].ingredients;
+        arrayOfItems[index2].innerHTML = `${arrayOfFood[index2].name} <br> Ingredients: ${arrayOfFood[index2].ingredients} <br> Price: ${arrayOfFood[index2].price}` ;
+        // arrayOfIngredientsOfList[index2].textContent = `${arrayOfFood[index2].name} \n ${arrayOfFood[index2].ingredients}      ${arrayOfFood[index2].price}` ;
         // console.log(arrayOfFood[index2].ingredients);
     }
 }
-// console.log(arrayOfFood);
+
 renderSixItems();
 
+//Store user's orders which he clicked on in the table
 function storeFood() {
-    // console.log(1);
     localStorage.setItem('arrayOfStoredFood', JSON.stringify(arrayOfStoredFood));
 }
 
@@ -81,6 +80,11 @@ function retrieveFood() {
     }
 }
 
+//====================================================================================================
+////DEFINING FUNCTIONS FOR THE EVENTLISTENERS
+
+//Function that redirects the user to the checkout page (delivery.html) when he clicks on the shopping cart button 
+//if the cart (local storage) has items in it 
 function redirect(event) {
     if (localStorage.length > 0) {
         document.location = 'delivery.html';
@@ -89,29 +93,37 @@ function redirect(event) {
     }
 }
 
+//Clear the cart (localstorage) if the user clicks on clear cart button
 function clearCart(event) {
     if (localStorage.length > 0) {
         localStorage.clear();
-        alert('Your cart was cleared');
+        alert('Your cart has been cleared');
     } else {
         alert('Your cart is empty already');
     }
 }
 
+//Function checks if the clicked on the items in the table and if he did it would push the items that he clicked on 
+//to array of stored items and then call the store function 
 function checkClick(event) {
     var checkId = event.target.id;
-    // console.log(checkId);
+    console.log(checkId);
     for (let index3 = 0; index3 < arrayOfClickedItems.length; index3++) {
-        if (checkId === arrayOfClickedItems[index3] || checkId === arrayOfItems[index3].id || checkId === arrayOfIngredientsOfList[index3].id) {
+        if (checkId === arrayOfClickedItems[index3] || checkId === arrayOfItems[index3].id) {
             arrayOfStoredFood.push(arrayOfFood[index3]);
-            // console.log(arrayOfFood[index3]);
             storeFood();
         }
     }
 }
 
+//====================================================================================================
+////DECLARING EVENTLISTENERS
+
+//Event listener that listens for clicks on the meals table and then call the function checkClick
 table.addEventListener('click', checkClick);
 
+//Event listener that listens for clicks on the cart button and then call the function redirect
 cartButton.addEventListener('click', redirect);
 
+//Event listener that listens for clicks on the clear cart button and then call the function clearCart
 clearShoppingCart.addEventListener('click', clearCart);
