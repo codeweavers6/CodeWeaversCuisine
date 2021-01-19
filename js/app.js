@@ -29,6 +29,10 @@ var table = document.getElementById('table');
 var cartButton = document.getElementById("cart-button");
 var clearShoppingCart = document.getElementById("clear-shopping-cart");
 
+// Feedback variables
+var feedbackBox = document.getElementById("customer-feedback-box");
+var feedback = [];
+var customersReview = 0;
 //====================================================================================================
 //Constructor for the meals
 function Meals(path, ingredients, price) {
@@ -60,7 +64,7 @@ retrieveFood();
 //Render the food in the table
 function renderSixItems() {
     for (let index2 = 0; index2 < arrayOfFood.length; index2++) {
-        arrayOfItems[index2].innerHTML = `${arrayOfFood[index2].name} <br> Ingredients: ${arrayOfFood[index2].ingredients} <br> Price: ${arrayOfFood[index2].price}` ;
+        arrayOfItems[index2].innerHTML = `${arrayOfFood[index2].name} <br> Ingredients: ${arrayOfFood[index2].ingredients} <br> Price: ${arrayOfFood[index2].price}`;
         // arrayOfIngredientsOfList[index2].textContent = `${arrayOfFood[index2].name} \n ${arrayOfFood[index2].ingredients}      ${arrayOfFood[index2].price}` ;
         // console.log(arrayOfFood[index2].ingredients);
     }
@@ -79,6 +83,28 @@ function retrieveFood() {
         arrayOfStoredFood = JSON.parse(localStorage.getItem('arrayOfStoredFood'));
     }
 }
+
+retrieveFeedback();
+
+function retrieveFeedback() {
+    if (localStorage.feedback.length > 0) {
+        feedback = JSON.parse(localStorage.getItem('feedback'));
+        console.log(feedback);
+        renderFeedback();
+    } else {
+        feedback = []; 
+    }
+}
+
+function renderFeedback() {
+    for (let index4 = 0; index4 < feedback.length; index4++) {
+        customersReview = document.createElement('li')
+        customersReview.textContent = feedback[index4];
+        feedbackBox.appendChild(customersReview);
+        console.log(feedback[index4]);
+    }
+}
+
 
 //====================================================================================================
 ////DEFINING FUNCTIONS FOR THE EVENTLISTENERS
