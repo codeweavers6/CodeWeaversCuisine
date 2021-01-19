@@ -1,5 +1,5 @@
 'use strict';
-var displayFormButton = document.getElementById(`add-meal-button`);
+var displayFormButton = document.getElementById('add-meal-button');
 var submitButton = document.getElementById('submit-button');
 var menu = document.getElementById('meals-list');  // meals container
 var menuContainer = document.getElementById('form') // add form to main container
