@@ -37,34 +37,46 @@
 
     <main class="main">
         <section>
+            <div id="printReport" class="reportDiv">
+                <!-- here is going to print the report -->
+                <button class="btn-reportConfirm">Confirm</button>
+                <button  class="btn-reportConfirm">Cancel</button>
+            </div>
             <div>
                 <form id="Main-dish">
 
-                    <fieldset>
+                    <fieldset id="customerFormId">
 
                         <legend>Main dish</legend>
 
                         <div>
+                            <label>Meal Name  :</label>
+                            <label><input name="mealNameName" placeholder="Meal Name" class="textf" type="text"></label>
+                        </div>
+
+                        <div>
                             <label>First Ingredient :</label>
-                            <label><input placeholder="First Ingredient" class="textf" type="text"></label>
+                            <label><input name="firstIngredientName" placeholder="First Ingredient" class="textf" type="text"></label>
                         </div>
 
                         <div>
                             <label>Second Ingredient :</label>
-                            <label><input placeholder="Second Ingredient" class="textf" type="text"></label>
+                            <label><input name="secondIngredientName" placeholder="Second Ingredient" class="textf" type="text"></label>
                         </div>
+                        <div id="addmoreIngreds">
 
+                        </div>
                         <div>
-                            <button>Add More Ingredient ...</button>
+                            <button id="addIngredientId">Add More Ingredient ...</button>
                         </div>
 
 
                         <div>
                             <label>Which type Of meat You like :</label>
-                            <label>chicken-5$</label>
+                            <label>Chicken-5$</label>
                             <input type="radio" name="meat-type">
 
-                            <label>meat-10$</label>
+                            <label>Meat-10$</label>
                             <input type="radio" name="meat-type">
                         </div>
 
@@ -84,7 +96,7 @@
                         <div>
                             <input class="submit-order" id="submit-order" type="submit">
                         </div>
-
+                       
                     </fieldset>
 
                 </form>
@@ -105,22 +117,22 @@
             <h4>Our Saftey Certificates</h4>
             <ul>
                 <li>
-                    ISO 22000
+                    <img src="img/iso-9001.jpg" alt="">
                 </li>
                 <li>
-                    ISO 14001
+                    <img src="img/iso-14001.jpg" alt="">
                 </li>
                 <li>
-                    ISO 9001:2015
+                    <img src="img/iso-22000.png" alt="">
                 </li>
             </ul>
         </div>
         <div class="second-div">
             <h4>You Can Find Us On Social media</h4>
             <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Snapchat</a></li>
+                <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+                <li><a href=""><img src="img/instagram.png" alt=""></a></li>
+                <li><a href=""><img src="img/snapchat.png" alt=""></a></li>
             </ul>
         </div>
         <div class="third-div">
@@ -128,6 +140,7 @@
             <a href="https://github.com/codeweavers6">codeWeavers</a>
         </div>
     </footer>
+    <script src="js/makeMeal.js"></script>
 </body>
 
 </html>

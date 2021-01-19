@@ -1,15 +1,15 @@
-body{
-    
+body{    
     font-family:'Josefin Slab', serif;
 }
+
 a{
     color: #a20a0a;
 }
+
 a:hover{
-    color: #f05454;
-    
-    
+    color: #f05454;    
 }
+
 .img-text-left{
     width: 45%;
     height: 400px;
@@ -23,6 +23,7 @@ a:hover{
     font-family: 'Shadows Into Light', cursive;
 
 }
+
 .img-text-right{
     width: 45%;
     height: 400px;
@@ -35,11 +36,13 @@ a:hover{
     float: right;
     font-family: 'Shadows Into Light', cursive;
 }
+
 .main-img{
     width: 100%;
     height: 330px;
     border-radius: 10px 10px 0 0;
 }
+
 .main-image-text{
     width: 100%;
     height: 100px;
@@ -48,40 +51,39 @@ a:hover{
     font-size: 2vw;
     padding-top: 15px;
 }
+
 .img-section{
     padding-top: 130px;
     height: 500px;
 }
+
 table{
     width: 100%;
     border-radius: 5px;
     margin-bottom: 50px;
     font-size: 22px;
     border-width: 1px;
-
 }
 
 th,tr,td{
     width: 10px;
     padding: 30px 0px 30px 10px;
-
     font-family: 'Merienda', cursive;
-
-
-    
-
 }
 
 h3{
+    margin-top: 25px;
     padding-bottom: 30px;
     padding-top: 30px;
     font-size: 35px;
     font-family:'Merienda', cursive;
 }
+
 .customer-reviews{
     font-size: 20px;
     padding: 5px;
 }
+
 th:first-child{
     font-size: 30px;
     background-color: #fff5c0;
@@ -90,6 +92,7 @@ th:first-child{
     border-color: #a20a0a;
     font-family:'Merienda', cursive;
 }
+
 th:nth-child(3){
     font-size: 30px;
     background-color: #fff5c0;
@@ -98,35 +101,32 @@ th:nth-child(3){
     border-color: #a20a0a;
     font-family:'Merienda', cursive;
 }
-td:first-child{
+
+td:first-child, td:nth-child(3) {
     background-color:white ;
 }
-td:nth-child(3){
-    background-color:white ;
-}
 
-td:first-child:hover{
+td:first-child:hover, td:nth-child(3):hover{
     cursor: pointer;
-    opacity: 0.7;
+    color: #f05454
 }
 
-td:nth-child(3):hover{
-    cursor: pointer;
-    opacity: 0.7;
+td:first-child:active,td:nth-child(3):active {
+    box-shadow: 0 0 1px 2px #a20a0a;
 }
 
-#cart-button:hover{
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.first-div ul li {
-    display: inline;
-}
- 
-.first-div img {
-    margin-top: 20px;
-    width: 50px;
-    height: 50px;
+section:nth-child(2) img {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
+
+section:nth-child(2) img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+section:nth-child(2) img:active {
+    box-shadow: 0 0 1px 2px #a20a0a;
+}
+
