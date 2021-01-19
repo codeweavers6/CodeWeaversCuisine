@@ -5,7 +5,7 @@
 var arrayOfCustomerMeal = [];
 var addIngredient = document.getElementById("addIngredientId");
 var submitIngredient = document.getElementById("Main-dish");
-var cancelOrder= document.getElementById('cancel_order_button');
+// var cancelOrder= document.getElementById('cancel_order_button');
 
 var counter = 3;
 
@@ -67,12 +67,16 @@ function submitIngrenientFunction(event) {
         var firstIngredientNew = event.target.firstIngredientName.value;
         var secondIngredientNew = event.target.secondIngredientName.value;
         var test = document.getElementsByClassName("textf");
+
+
         arrayofIngredients = [firstIngredientNew, secondIngredientNew];
         if (test.length > 3) {
-            console.log(event.target.extraIngredient.value);
             //var newIngredient = event.target.extraIngredient.value;
-         
-            arrayofIngredients.push(event.target.extraIngredient.value);
+            for (let index = 3; index < test.length; index++) {
+                arrayofIngredients.push(test[index].value);
+
+            }
+
             console.log(arrayofIngredients);
         }
         // arrayofIngredients.push(newIngredient);
@@ -86,9 +90,9 @@ function submitIngrenientFunction(event) {
 
 }
 //function to cancel the order
-function cancelOrderFunction(){
-    localStorage.clear();
-}
+// function cancelOrderFunction(){
+//     localStorage.clear();
+// }
 
 
 
@@ -110,6 +114,6 @@ function cancelOrderFunction(){
 addIngredient.addEventListener('click', addIngredientFunction);
 // listner to submit the form
 submitIngredient.addEventListener('submit', submitIngrenientFunction);
-console.log(submitIngredient);
+// console.log(submitIngredient);
 //listner to cancel the order
-cancelOrder.addEventListener('click', cancelOrderFunction);
+// cancelOrder.addEventListener('click', cancelOrderFunction);
