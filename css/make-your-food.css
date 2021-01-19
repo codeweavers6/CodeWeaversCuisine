@@ -97,6 +97,19 @@ legend{
     font-size: 40px;
     border-style: double;
 }
+img{
+    position: absolute;
+    left: 1%;
+    
+}
+
+
+@media only screen and (max-width:1600px) {
+    img{
+        position: absolute;
+       left: -10%;
+    }
+}
 
 
 
