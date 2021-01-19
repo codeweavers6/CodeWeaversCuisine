@@ -6,6 +6,7 @@ var addMealToMenuForm = document.getElementById('main-menu-form')    // add form
 var menuList = [];  // list of meals objects
 var submitIngredients = [];   // get user ingredients
 // ........................................................ Data Model properties + methods + objects
+
 function MainMenu(name, url, ingredients) {
     this.name = name;
     this.imgUrl = url;
@@ -25,9 +26,9 @@ var fattoushSalad = new MainMenu('Arabic Fattoush Salad', "https://encrypted-tbn
         'cucumber',
         'onion'
     ])
-fattoushSalad.setPrice()
+fattoushSalad.setPrice();
 
-var PizzaExtravaganza = new MainMenu('pizza extravaganza', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNkfT9fPCwE_xPOdFRUYOsBPZErI57AfK7EA&usqp=CAU',
+var PizzaExtravaganza = new MainMenu('pizza extravaganza', 'https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg',
     [
         'vegetable oil',
         'pita breads',
@@ -47,6 +48,37 @@ var mansaf = new MainMenu('mansaf', 'https://cdn.theculturetrip.com/wp-content/u
     ]);
 mansaf.setPrice();
 
+var piquant = new MainMenu('PIQUANT PEPPER TART', 'https://cdn.pixabay.com/photo/2017/06/16/18/35/tarte-2409958_960_720.jpg',
+    [
+        ' crème fraîche',
+        'vinaigrette-dressed salad',
+        'flour',
+        'caster sugar',
+        'pinch salt',
+        'Parmesan, grated'
+    ]);
+piquant.setPrice();
+
+var salmon_fish = new MainMenu('Salmon Fish', 'https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg',
+    [
+        'salmon',
+        'mustard',
+        'maple syrup',
+        'garlic',
+        'salt'
+    ]);
+salmon_fish.setPrice();
+
+var barbecue = new MainMenu(' Barbecue', 'https://cdn.pixabay.com/photo/2016/04/04/17/22/asparagus-1307604_960_720.jpg',
+    [
+        'beef steak',
+        'marinade',
+        'Spiced Cider and Maple Marinade',
+        'Lemon-Pepper Marinade',
+        'pine Soy-Balsamic Marinade',
+        'Wine and Herb Marinade'
+    ]);
+barbecue.setPrice();
 function displayMeals() { // render meals on screen
     for (var i = 0; i < menuList.length; i++) {
         createMeal(menuList[i])
@@ -68,13 +100,15 @@ function createMeal(meal) {  // add meal to html
     b.textContent = meal.name;
     h1.append(b);
 
-    var span = document.createElement('span'); // price
-    span.innerText = ` ${meal.price}$`
-    h1.append(span);
+    var h3 = document.createElement('h3'); // price
+    h3.innerText = ` ${meal.price}$`
+    div.append(h3);
 
-    var p2 = document.createElement('p2'); // add ingredients
-    p2.textContent = meal.ingredients;
-    div.append(p2);
+    for (var i = 0; i < meal.ingredients.length; i++) {  // add ingredients
+        var p2 = document.createElement('p');
+        p2.textContent = meal.ingredients[i];
+        div.append(p2);
+    }
 
     var button = document.createElement('button');
     button.setAttribute('onClick', "window.location.href='delivery.html';")

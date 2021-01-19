@@ -1,5 +1,6 @@
 body{    
     font-family:'Josefin Slab', serif;
+    
 }
 
 a{
@@ -63,6 +64,7 @@ table{
     margin-bottom: 50px;
     font-size: 22px;
     border-width: 1px;
+
 }
 
 th,tr,td{
