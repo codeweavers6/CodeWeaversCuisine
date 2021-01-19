@@ -1,8 +1,5 @@
 /* done by ibrahim */
-body{
-    background-color: #f6eec9;
-    
-}
+
 a{
     text-decoration: none;
 }
@@ -114,3 +111,6 @@ a:hover{
     color: white;
 }
 
+#main-menu-form {
+    display: none;
+  }
