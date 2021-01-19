@@ -41,18 +41,22 @@
     </header>
 
     <main class="main">
+        <div class="head">
+            <h1 id="deliveryStatus">Your Order is Ready to go</h1>
+        </div>
 
-        <h1>Your Order is on its way</h1>
         <div>
             <img class="gif" src="https://media3.giphy.com/media/W5OnE0wl1G9B8HDLTP/source.gif" alt="delivery img" />
-            <button>Check Order Status</button>
+            <button id="check_order_status">Check Order Status</button>
             <button id="cancel_order_button">Cancel order</button>
         </div>
 
         <div>
-            <h3> What do you like our services?</h3>
+            <h3>What Do Your Think About Our Services</h3>
             <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+                <textarea id="subjectId" name="subjectName" class="textfild" placeholder="Write your feedback here!.."></textarea>
+                <button id="feedbackButton">Submit Feedback</button>
             </div>
         </div>
 
@@ -87,6 +91,8 @@
         </div>
     </footer>
     <!-- <script src="js/makeMeal.js"></script> -->
+    <script src="js/delivery.js"></script>
+
 </body>
 
 </html>
