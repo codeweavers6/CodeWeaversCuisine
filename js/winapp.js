@@ -14,6 +14,8 @@ var productCanvas2 = document.getElementById('productChart2').getContext('2d');
 //variables for the buttons
 var clearDataBtn = document.getElementById('clearLocalStorage');
 var displaychart2 = document.getElementById('show_Chart2');
+var backBtn = document.getElementById('back_button');
+
 
 
 var shownImages = []; // this array will be responsible  for keeping track of the shown img at the current loop
@@ -144,7 +146,7 @@ function checkProduct(objectIndicator) {
         
     }
     if (clicksLeft === 0) {
-        //renderChart();
+        
         renderChart2();
         createButton();
     }
@@ -159,16 +161,16 @@ function checkProduct(objectIndicator) {
         var par2 = document.createElement("p");
         par2.textContent= "Stay Strong Weaver!";
         divPrice.appendChild(par2);
-        // var img = document.createElement("img");
-        // img.setAttribute("src","https://i.gifer.com/6k2.gif")
-        // divPrice.appendChild(img);
         document.getElementById("priceDiv").style.backgroundImage = "url('https://media0.giphy.com/media/X6k5iprfVRp2V88DDS/source.gif')";
         clicksLeft = 0;
      }
 }
 
 // adding a listner to the show chart button
-displaychart2.addEventListener("click", renderChart2)
+displaychart2.addEventListener("click", renderChart2);
+backBtn.addEventListener("click", function backBtnFunction(){
+    document.location = 'delieveryInfo.html';
+});
 
 //=======================
 // chart
