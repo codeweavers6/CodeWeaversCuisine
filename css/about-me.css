@@ -1,31 +1,44 @@
 /* done by ibrahim */
+article a{
+    color: black;
+    font-size: 20px;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+    bottom: 50px;
+}
+a:hover{
+    color: #a20a0a;
+}
 p{
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 23px;
 }
 article img {
-    width: 60%;
+    width: 70%;
     height: 150px;
-    float: left;
-    border-radius: 55%;
+    border-radius: 50%;
     position: relative;
-    bottom: 60px;
+    bottom: 65px;
     margin: 35px;
     border-width: 3px;
     border-style: solid;
     border-color: white;
-    box-shadow: 0 4px 8px 0 rgba(185, 185, 185, 0.2), 0 6px 20px 0 rgba(187, 187, 187, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(53, 53, 53, 0.2), 0 6px 20px 0 rgba(58, 58, 58, 0.19);
+    float: left;
 
 }
 article{
-    width: 230px;
+    width: 200px;
     background-color: white;
     border-radius: 5px;
     border-color:#a20a0a ;
-    float: inline-start;
-    margin: 20px;
-    box-shadow: 0 4px 8px 0 rgba(189, 189, 189, 0.2), 0 6px 20px 0 rgba(187, 187, 187, 0.19);
+    float: left;
+    margin: 0px 15px 100px 15px;
+    box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.2), 0 6px 20px 0 rgba(109, 109, 109, 0.19);
     text-align: center;
+    padding: 10px;
+    height: 300px;
 
 }
 
@@ -37,18 +50,18 @@ h2 , h1{
    padding-top: 80px;
 
 }
-h4 {
+.names {
     font-size: 23px;
     position: relative;
-    padding-bottom :50px; ;
-    bottom: 80px;
+    padding-bottom :10px; ;
+    bottom: 70px;
 
 }
-a{
-    padding-right: 30px;
-    margin-top: 20px;
+.bio{
     position: relative;
-    
+    bottom: 70px;
+    text-align: left;
+    font-size: 14px;
 }
 
 
