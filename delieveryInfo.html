@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,26 @@
 
     <title>Delivery Tracking</title>
 </head>
+
 <body>
 
-    
+
     <header>
         <nav>
             <ul>
                 <li><img id="logo" src="img/logo_transparent.png" alt=""></li>
-                <a href="index.html"><li class="li">Home</li></a>
-                <a href="menu.html"><li class="li">Main Menu</li></a>
-                <a href="make-your-own-meal.html"><li class="li">Make Your Food</li></a>
-                <a href="about-us.html"><li class="li">About Us</li></a>
+                <a href="index.html">
+                    <li class="li">Home</li>
+                </a>
+                <a href="menu.html">
+                    <li class="li">Main Menu</li>
+                </a>
+                <a href="make-your-own-meal.html">
+                    <li class="li">Make Your Food</li>
+                </a>
+                <a href="about-us.html">
+                    <li class="li">About Us</li>
+                </a>
 
             </ul>
         </nav>
@@ -29,21 +39,21 @@
 
     <main class="main">
 
-    <h1>Your Order is on its way</h1>
-    <div>
-        <img class="gif" src="https://media3.giphy.com/media/W5OnE0wl1G9B8HDLTP/source.gif" alt="delivery img" />
-        <button>Check Order Status</button>
-        <button>Cansel order</button>
-    </div>
-    
-    <div>
-        <h3> What do you like our services?</h3>
-        <div class="col-75">    
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    
-          </div>
-    </div>
+        <h1>Your Order is on its way</h1>
+        <div>
+            <img class="gif" src="https://media3.giphy.com/media/W5OnE0wl1G9B8HDLTP/source.gif" alt="delivery img" />
+            <button>Check Order Status</button>
+            <button id="cancel_order_button">Cancel order</button>
+        </div>
 
-</main>
+        <div>
+            <h3> What do you like our services?</h3>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         <div class="first-div">
@@ -73,6 +83,7 @@
             <a href="https://github.com/codeweavers6">codeWeavers</a>
         </div>
     </footer>
-
+    <script src="js/makeMeal.js"></script>
 </body>
+
 </html>
