@@ -27,6 +27,7 @@ function Product(name) {
     this.timesShown = 0;
     this.timesClicked = 0;
     arrayOfProduct.push(this);
+    
 }
 
 // creating the objects
@@ -68,9 +69,14 @@ function checkAvailability(selectProductName) {
 
 //function for choosing 3 random images
 function pickImage() {
-    do {
-        var leftImg = Math.round(Math.random() * (arrayOfProduct.length - 1));
-        var leftImageName = arrayOfProduct[leftImg].productName;
+
+    var leftImg
+    var leftImageName
+    console.log(arrayOfProduct);
+    do {    
+        leftImg = Math.round(Math.random() * (arrayOfProduct.length - 1));
+        
+        leftImageName = arrayOfProduct[leftImg].productName;
     } while (checkAvailability(leftImageName));
 
 
