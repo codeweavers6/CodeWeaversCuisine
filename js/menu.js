@@ -143,7 +143,6 @@ function addNewMeal(event) {   // take meal information from user
     newMeal.setPrice();
 
 
-
     addToLocalStorage()
     getFromListStorage()
     displayMeals(); // display  element
