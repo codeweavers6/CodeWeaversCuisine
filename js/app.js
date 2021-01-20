@@ -6,7 +6,7 @@
 // Variables and arrays related to the constructor
 var arrayOfFood = [];
 var arrayOfPaths = ['pizza extravaganza.jpg', 'Salmon Fish.jpg', 'mansaf.jpg', 'Arabic Fattoush Salad.jpg', 'Barbecue.jpg', 'PIQUANT PEPPER TART.jpg'];
-var arrayOfIngredients = ['Bell peper.Tomato sauce.Mozzarella.salami', 'Wild salmon.lime and garlic.Vegetable saute.Mash potato','Lamb meat.Greek yogurt.Karaki jameed.Basmati rice.pine nuts.Bread', 'Pita bread.lime.romaine lettuce.cinnamon.olive oil', 'beef steak.marinade.Spiced Cider and Maple Marinade.pine Soy-Balsamic Marinade','crème fraîche.flour.caster sugar.Parmesan.grated'];
+var arrayOfIngredients = ['Bell peper.Tomato sauce.Mozzarella.salami', 'Wild salmon.lime and garlic.Vegetable saute.Mash potato', 'Lamb meat.Greek yogurt.Karaki jameed.Basmati rice.pine nuts.Bread', 'Pita bread.lime.romaine lettuce.cinnamon.olive oil', 'beef steak.marinade.Spiced Cider and Maple Marinade.pine Soy-Balsamic Marinade', 'crème fraîche.flour.caster sugar.Parmesan.grated'];
 var arrayOfPrices = [];
 var getFoodId = 0;
 var arrayOfStoredFood = [];
@@ -79,7 +79,7 @@ function storeFood() {
 
 
 function retrieveFood() {
-    if (arrayOfStoredFood.length > 0) {
+    if (arrayOfStoredFood !== 0) {
         arrayOfStoredFood = JSON.parse(localStorage.getItem('arrayOfStoredFood'));
     }
 }
@@ -87,20 +87,22 @@ function retrieveFood() {
 retrieveFeedback();
 
 function retrieveFeedback() {
-    if (feedback.length > 0) {
+    if (feedback !== 0) {
         feedback = JSON.parse(localStorage.getItem('feedback'));
         renderFeedback();
     } else {
-        feedback = []; 
+        feedback = [];
     }
 }
 
 function renderFeedback() {
-    for (let index4 = 0; index4 < feedback.length; index4++) {
-        customersReview = document.createElement('li')
-        customersReview.textContent = feedback[index4];
-        feedbackBox.appendChild(customersReview);
-        console.log(feedback[index4]);
+    if (feedback !== 0) {
+        for (let index4 = 0; index4 < feedback.length; index4++) {
+            customersReview = document.createElement('li')
+            customersReview.textContent = feedback[index4];
+            feedbackBox.appendChild(customersReview);
+            console.log(feedback[index4]);
+        }
     }
 }
 
@@ -111,7 +113,7 @@ function renderFeedback() {
 //Function that redirects the user to the checkout page (delivery.html) when he clicks on the shopping cart button 
 //if the cart (local storage) has items in it 
 function redirect(event) {
-    if (localStorage.length > 0) {
+    if (arrayOfStoredFood !== 0) {
         document.location = 'delivery.html';
     } else {
         alert('Your cart is empty');
@@ -120,8 +122,8 @@ function redirect(event) {
 
 //Clear the cart (localstorage) if the user clicks on clear cart button
 function clearCart(event) {
-    if (localStorage.length > 0) {
-        localStorage.clear();
+    if (arrayOfStoredFood !== 0) {
+        arrayOfStoredFood.removeItem();
         alert('Your cart has been cleared');
     } else {
         alert('Your cart is empty already');
