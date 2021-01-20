@@ -5,8 +5,8 @@
 
 // Variables and arrays related to the constructor
 var arrayOfFood = [];
-var arrayOfPaths = ['food1.jpg', 'food2.jpg', '', 'food1.jpg', 'food2.jpg'];
-var arrayOfIngredients = ['Salt.Peper.Garlic', 'Onion.Bell peper.Parsley', '', 'Salt.Peper.Garlic', 'Onion.Bell peper.Parsley'];
+var arrayOfPaths = ['pizza extravaganza.jpg', 'Salmon Fish.jpg', 'mansaf.jpg', 'Arabic Fattoush Salad.jpg', 'Barbecue.jpg', 'PIQUANT PEPPER TART.jpg'];
+var arrayOfIngredients = ['Bell peper.Tomato sauce.Mozzarella.salami', 'Wild salmon.lime and garlic.Vegetable saute.Mash potato','Lamb meat.Greek yogurt.Karaki jameed.Basmati rice.pine nuts.Bread', 'Pita bread.lime.romaine lettuce.cinnamon.olive oil', 'beef steak.marinade.Spiced Cider and Maple Marinade.pine Soy-Balsamic Marinade','crème fraîche.flour.caster sugar.Parmesan.grated'];
 var arrayOfPrices = [];
 var getFoodId = 0;
 var arrayOfStoredFood = [];
@@ -79,7 +79,7 @@ function storeFood() {
 
 
 function retrieveFood() {
-    if (localStorage.length > 0) {
+    if (arrayOfStoredFood.length > 0) {
         arrayOfStoredFood = JSON.parse(localStorage.getItem('arrayOfStoredFood'));
     }
 }
@@ -87,9 +87,8 @@ function retrieveFood() {
 retrieveFeedback();
 
 function retrieveFeedback() {
-    if (localStorage.feedback.length > 0) {
+    if (feedback.length > 0) {
         feedback = JSON.parse(localStorage.getItem('feedback'));
-        console.log(feedback);
         renderFeedback();
     } else {
         feedback = []; 
