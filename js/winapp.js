@@ -9,7 +9,7 @@ var leftProductText = document.getElementById('left_product_h2');
 var centerProductText = document.getElementById('center_product_h2');
 var rightProductText = document.getElementById('right_product_h2');
 var clicksLeft = 10;
-
+console.log(arrayOfImages );
 var productCanvas2 = document.getElementById('productChart2').getContext('2d');
 //variables for the buttons
 var clearDataBtn = document.getElementById('clearLocalStorage');
@@ -23,11 +23,12 @@ var shownImages = []; // this array will be responsible  for keeping track of th
 //constractor
 function Product(name) {
     this.productName = name.split(".")[0];
-    this.imgFilePath = 'img/' + name;
+    // this.imgFilePath = 'img/' + name;
     this.timesShown = 0;
     this.timesClicked = 0;
     arrayOfProduct.push(this);
 }
+
 
 // creating the objects
 function generateObjects() {
@@ -36,6 +37,7 @@ function generateObjects() {
     }
 }
 generateObjects();
+console.log(Product.imgFilePath);
 
 //functions regarding storing the data
 function storeData() {

@@ -1,62 +1,110 @@
 #main-menu-form {
     display: none;
-  }
-.main{
+}
+
+#theMenu{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #a20a0a ;
+}
+#meals-list{
+    background-color: white;
+    border: 4px #a20a0a solid;
+    border-radius: 10px;
+    margin-bottom: 150px;
+}
+.meal{
+    width: 100%;
+    clear: both;
+    margin-bottom: 80px;
+    height: 350px;
+  
+}
+.img-div{
     width: 50%;
-    position: relative;
-    left: 25%;
-    margin-top: 135px;
-}
-
-#theMenu {
-    text-align: center;
-    color: #a20a0a;
-    font-size: 64px!important;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
+    float: left;
     margin-bottom: 50px;
+    height: 350px;
 }
-/* #meals-list div{
-    display: inline-bock;
-    width: 45%;
-
-} */
-
-#meals-list img {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-    border-radius: 50%;
+.img-div img{
+    width: 90%;
+    border: 2px white solid;
+    border-radius: 15px;
+    height: 350px;
+    margin: 10px;
 
 }
-
-p {
-    color: #a20a0a;
-    text-align: center;
-    font-size: 21px!;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    margin-top: 5px;
-    margin-left: 150px;
+.info-div{
+    width: 50%;
+    float: right;
+    height: 350px;
+}
+.info-div h1{
+    font-size: 32px;
+    padding: 15px;
+    font-weight: bolder;
 }
 
-div h1 {
-    color: #a20a0a;
-    text-align: center;
-    font-size: 30px!important;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
+.info-div h3{
+    font-size: 25px;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.info-div p{
+    font-size: 20px;
+    padding: 0px 0px 10px 0px;
+}
+
+.info-div button{
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    background-color:#a20a0a ;
+    color: #f6eec9;
+    float: right;
+    margin-right: 20px;
+}
+
+fieldset{
+    border: 2px #a20a0a solid;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+}
+#add-meal-button {
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    background-color:#a20a0a ;
+    color: #f6eec9;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    
+}
+input {
+    width: 95%;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 20px;
+    border: 2px #a20a0a solid ;
+}
+#submit-add-meal{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    background-color:#a20a0a ;
+    color: #f6eec9;
+    margin-right: 20px;
     margin-top: 20px;
 }
-
-Button {
-    
-    background-color:#a20a0a; 
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 50%
+label{
+    font-size: 25px;
+}
+button:hover ,input:hover,#submit-add-meal:hover, #add-meal-button:hover {
+    background-color:#f6eec9 ;
+    color:#a20a0a  ;
 }
