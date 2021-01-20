@@ -79,7 +79,7 @@ function storeFood() {
 
 
 function retrieveFood() {
-    if (arrayOfStoredFood !== 0) {
+    if (arrayOfStoredFood.length < 0) {
         arrayOfStoredFood = JSON.parse(localStorage.getItem('arrayOfStoredFood'));
     }
 }
@@ -113,7 +113,7 @@ function renderFeedback() {
 //Function that redirects the user to the checkout page (delivery.html) when he clicks on the shopping cart button 
 //if the cart (local storage) has items in it 
 function redirect(event) {
-    if (arrayOfStoredFood !== 0) {
+    if (arrayOfStoredFood.length > 0) {
         document.location = 'delivery.html';
     } else {
         alert('Your cart is empty');
@@ -122,19 +122,15 @@ function redirect(event) {
 
 //Clear the cart (localstorage) if the user clicks on clear cart button
 function clearCart(event) {
-    if (arrayOfStoredFood !== 0) {
-        arrayOfStoredFood.removeItem();
-        alert('Your cart has been cleared');
-    } else {
-        alert('Your cart is empty already');
-    }
+    feedback = [];
+    alert('Your cart has been cleared');
 }
 
 //Function checks if the clicked on the items in the table and if he did it would push the items that he clicked on 
 //to array of stored items and then call the store function 
 function checkClick(event) {
     var checkId = event.target.id;
-    console.log(checkId);
+    // console.log(checkId);
     for (let index3 = 0; index3 < arrayOfClickedItems.length; index3++) {
         if (checkId === arrayOfClickedItems[index3] || checkId === arrayOfItems[index3].id) {
             arrayOfStoredFood.push(arrayOfFood[index3]);
