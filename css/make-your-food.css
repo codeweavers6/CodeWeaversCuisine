@@ -9,7 +9,8 @@ fieldset{
     font-size: 20px;
     background-color: #fff5c0;
     color: #a20a0a;
-    margin-top: 199px;
+    margin:250px 0px 200px 0;
+
 }
 input{
     padding: 10px;
@@ -18,8 +19,8 @@ input{
     border-color: #a20a0a;
     font-size: 18px;
 }
-.textf{
-    width: 90%;
+.textf , .input-item{
+    width: 95%;
 }
 label{
     padding: 10px;
@@ -86,10 +87,21 @@ footer {
     bottom: 0px;
 }
 .reportDiv{
-    width: 30%;
+    
     height: 310px;
-    font-size: 20px;
+    font-size: 30px;
+
 }
+.reportDiv h2{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.reportDiv p{
+    text-align: left;
+    padding: 0px 0px 20px 20px;
+    font-size: 18px;
+}
+
 legend{
     background-color: white;
     border-radius: 5px;
@@ -97,7 +109,7 @@ legend{
     font-size: 40px;
     border-style: double;
 }
-img{
+.background-img{
     position: absolute;
     left: 1%;
     
@@ -105,7 +117,7 @@ img{
 
 
 @media only screen and (max-width:1600px) {
-    img{
+    .background-img{
         position: absolute;
        left: -10%;
     }

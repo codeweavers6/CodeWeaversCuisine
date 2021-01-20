@@ -141,7 +141,7 @@ section:nth-child(2) img:active {
 }
 
 
-/* .active-cell-offer::before{
+.active-cell-offer::before{
     content: "Offer";
     width: 300px;
     background-color: #a20a0a;
@@ -172,5 +172,5 @@ section:nth-child(2) img:active {
         left:60%; 
     
     }
-} */
+}
 
