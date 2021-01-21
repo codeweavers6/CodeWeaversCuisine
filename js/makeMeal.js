@@ -10,6 +10,8 @@ var printReportForm = document.getElementById('printReport')
 var cancelOrderButton = document.getElementById('btn-cancelConfirm');
 var confirmOrderButton = document.getElementById('btn-reportConfirm');
 var reportDiv = document.getElementById('reportDiv');
+var deliveryBtn = document.getElementById('confirmButtonIdId');
+
 var counter = 3;
 
 
@@ -106,5 +108,13 @@ function cancelReport() {
 addIngredient.addEventListener('click', addIngredientFunction); //listner to add more ingredients
 // listner to submit the form
 submitIngredient.addEventListener('submit', submitIngrenientFunction);
-cancelOrderButton.addEventListener('click', cancelReport)
-confirmOrderButton.addEventListener('click', displayReport)
+cancelOrderButton.addEventListener('click', cancelReport);
+confirmOrderButton.addEventListener('click', displayReport);
+
+deliveryBtn.addEventListener('click', deliveryFunction);
+
+//function
+function deliveryFunction(event) {
+    event.preventDefault();
+    document.location = 'delieveryInfo.html';
+}

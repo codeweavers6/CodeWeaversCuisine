@@ -155,7 +155,9 @@ function addToLocalStorage() {
 }
 function getFromListStorage() {
     if (localStorage.length > 0) {
-        menuList = JSON.parse(localStorage.getItem('menu'));
+        if (localStorage.getItem('menu')) {
+            menuList = JSON.parse(localStorage.getItem('menu'));
+        }
     }
 }
 // ...........................executable code
@@ -164,3 +166,5 @@ addMealToMenuForm.addEventListener('submit', addNewMeal); // submit
 
 getFromListStorage();
 displayMeals();
+
+

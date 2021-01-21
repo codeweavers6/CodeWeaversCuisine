@@ -9,7 +9,7 @@ var leftProductText = document.getElementById('left_product_h2');
 var centerProductText = document.getElementById('center_product_h2');
 var rightProductText = document.getElementById('right_product_h2');
 var clicksLeft = 10;
-console.log(arrayOfImages );
+// console.log(arrayOfImages);
 var productCanvas2 = document.getElementById('productChart2').getContext('2d');
 //variables for the buttons
 var clearDataBtn = document.getElementById('clearLocalStorage');
@@ -23,11 +23,10 @@ var shownImages = []; // this array will be responsible  for keeping track of th
 //constractor
 function Product(name) {
     this.productName = name.split(".")[0];
-    // this.imgFilePath = 'img/' + name;
+    this.imgFilePath = 'img/' + name;
     this.timesShown = 0;
     this.timesClicked = 0;
     arrayOfProduct.push(this);
-    
 }
 
 
@@ -37,8 +36,7 @@ function generateObjects() {
         new Product(arrayOfImages[i]);
     }
 }
-generateObjects();
-console.log(Product.imgFilePath);
+
 
 //functions regarding storing the data
 function storeData() {
@@ -50,13 +48,15 @@ function clearLocalStorage() {
 }
 function checkAndRestore() {
     if (localStorage.length > 0) { // check if the local storage has any values in it
-        arrayOfProduct = JSON.parse(localStorage.getItem('buttom_section')); // restore the data from the local storage
+        if (localStorage.getItem('buttom_section')){
+            arrayOfProduct = JSON.parse(localStorage.getItem('buttom_section')); // restore the data from the local storage
+        }
     }
 }
 
-// adding a listener to reset the storage.
-// clearDataBtn.addEventListener('click', clearLocalStorage);
-checkAndRestore();
+function dispaly (){
+    
+}
 
 // Functions
 //function that ensure the images currently displayed are not the same as the next images to be displayed
@@ -71,14 +71,10 @@ function checkAvailability(selectProductName) {
 
 //function for choosing 3 random images
 function pickImage() {
-
-    var leftImg
-    var leftImageName
     console.log(arrayOfProduct);
-    do {    
-        leftImg = Math.round(Math.random() * (arrayOfProduct.length - 1));
-        
-        leftImageName = arrayOfProduct[leftImg].productName;
+    do {
+        var leftImg = Math.round(Math.random() * (arrayOfProduct.length - 1));
+        var leftImageName = arrayOfProduct[leftImg].productName;
     } while (checkAvailability(leftImageName));
 
 
@@ -118,9 +114,7 @@ function renderImg(leftImg, centerImg, rightImg) {
 
     storeData();
 }
-console.log(arrayOfProduct);
-//Calling Funcrions
-pickImage();
+
 
 
 
@@ -151,32 +145,32 @@ function checkProduct(objectIndicator) {
             clicksLeft--;
             storeData();
         }
-        
+
     }
     if (clicksLeft === 0) {
-        
+
         renderChart2();
         createButton();
     }
     if (objectIndicator == "img/Duck-Cake.jpg") {
         var divPrice = document.getElementById("priceDiv");
-        var headerPrice= document.createElement("h3");
-        headerPrice.textContent= "You Have Won a Price!";
+        var headerPrice = document.createElement("h3");
+        headerPrice.textContent = "You Have Won a Price!";
         divPrice.appendChild(headerPrice);
         var par = document.createElement("p");
-        par.textContent= "Because we believe in Rubber Duck Debugging, We want to encourge you by giving you this cake FOR FREE!";
+        par.textContent = "Because we believe in Rubber Duck Debugging, We want to encourge you by giving you this cake FOR FREE!";
         divPrice.appendChild(par);
         var par2 = document.createElement("p");
-        par2.textContent= "Stay Strong Weaver!";
+        par2.textContent = "Stay Strong Weaver!";
         divPrice.appendChild(par2);
         document.getElementById("priceDiv").style.backgroundImage = "url('https://media0.giphy.com/media/X6k5iprfVRp2V88DDS/source.gif')";
         clicksLeft = 0;
-     }
+    }
 }
 
 // adding a listner to the show chart button
 displaychart2.addEventListener("click", renderChart2);
-backBtn.addEventListener("click", function backBtnFunction(){
+backBtn.addEventListener("click", function backBtnFunction() {
     document.location = 'delieveryInfo.html';
 });
 
@@ -246,3 +240,11 @@ function renderChart2() {
     });
 }
 
+generateObjects();
+console.log(arrayOfProduct);
+// adding a listener to reset the storage.
+// clearDataBtn.addEventListener('click', clearLocalStorage);
+checkAndRestore();
+console.log(arrayOfProduct);
+//Calling Funcrions
+pickImage();
