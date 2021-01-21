@@ -39,7 +39,7 @@ a:hover{
 }
 
 .img-text-right:hover,.img-text-left:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .main-img{
@@ -172,8 +172,8 @@ section:nth-child(2) img:active {
 @media only screen and (max-width:1600px){
     .active-cell-offer::before{
         
-        bottom: 60%;  
-        left:60%; 
+        bottom: 74%;  
+        left:54%; 
     
     }
 }
